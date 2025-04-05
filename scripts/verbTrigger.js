@@ -9,7 +9,7 @@ export function initVerbTrigger(verbs) {
   verbTrigger.textContent = verbs[currentVerb];
 
   document.body.appendChild(verbTrigger);
-
+console.log('[verbTrigger] Element added to DOM:', verbTrigger);
   // Cycle verbs
   setInterval(() => {
     currentVerb = (currentVerb + 1) % verbs.length;
