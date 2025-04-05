@@ -18,6 +18,7 @@ export function initVerbTrigger(verbs) {
 
   // Ritual trigger
   verbTrigger.addEventListener('click', () => {
+    console.log('[verbTrigger] Clicked!');
     import('./flashSequence.js').then(mod => {
       mod.initFlashSequence();
     });
