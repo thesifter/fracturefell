@@ -1,58 +1,25 @@
-(function () {
-  function isWithinCenterZone(x, y) {
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
-    const marginX = vw * 0.025;
-    const marginY = vh * 0.025;
+// ✨ TEST VERSION: gifscare.js – Scaretest-Bonewave
+document.addEventListener('DOMContentLoaded', () => {
+  const scareZone = document.createElement('div');
+  scareZone.style.position = 'fixed';
+  scareZone.style.top = '47.5%';
+  scareZone.style.left = '47.5%';
+  scareZone.style.width = '5%';
+  scareZone.style.height = '5%';
+  scareZone.style.zIndex = '9999';
 
-    return (
-      x > (vw / 2 - marginX) &&
-      x < (vw / 2 + marginX) &&
-      y > (vh / 2 - marginY) &&
-      y < (vh / 2 + marginY)
-    );
-  }
+  document.body.appendChild(scareZone);
 
-  function showMindFlash() {
-    const flash = document.createElement('img');
-    flash.src = 'https://thesifter.github.io/fracturefell/images/fracturefell_flash.gif';
-    flash.alt = 'fracture glimpse';
-    flash.style.position = 'fixed';
-    flash.style.top = '50%';
-    flash.style.left = '50%';
-    flash.style.transform = 'translate(-50%, -50%)';
-    flash.style.zIndex = 9999;
-    flash.style.maxWidth = '320px';
-    flash.style.maxHeight = '320px';
-    flash.style.boxShadow = '0 0 30px rgba(0,0,0,0.6)';
-    flash.style.opacity = '0';
-    flash.style.transition = 'opacity 0.3s ease-in';
-    flash.style.pointerEvents = 'none';
-
-    document.body.appendChild(flash);
-
-    requestAnimationFrame(() => {
-      flash.style.opacity = '1';
-    });
-
-    setTimeout(() => {
-      flash.remove();
-    }, 3000);
-  }
-
-  function maybeSummonFlash(x, y) {
-    if (isWithinCenterZone(x, y)) {
-      const chance = Math.random();
-      if (chance < 0.4) { // 40% chance
-        showMindFlash();
-      }
-    }
-  }
-
-  document.addEventListener('click', e => maybeSummonFlash(e.clientX, e.clientY));
-  document.addEventListener('mousemove', e => maybeSummonFlash(e.clientX, e.clientY));
-  document.addEventListener('touchstart', e => {
-    const touch = e.touches[0];
-    if (touch) maybeSummonFlash(touch.clientX, touch.clientY);
+  scareZone.addEventListener('mouseenter', () => {
+    const img = document.createElement('img');
+    img.src = './images/fracturefell_flash.gif';
+    img.style.position = 'fixed';
+    img.style.top = '0';
+    img.style.left = '0';
+    img.style.width = '100vw';
+    img.style.height = '100vh';
+    img.style.zIndex = '10000';
+    document.body.appendChild(img);
+    setTimeout(() => img.remove(), 1500);
   });
-})();
+});
