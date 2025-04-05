@@ -1,8 +1,14 @@
 body {
-  background: #0e0e0e;
+  background: radial-gradient(
+    circle at top right,
+    #2c3e50,   /* deep blue */
+    #3e5f3a,   /* moss green */
+    #5e4026    /* earthy brown */
+  );
   color: #e2e2e2;
   font-family: monospace;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 .glitched {
@@ -10,3 +16,5 @@ body {
   transform: skewX(3deg);
   transition: all 0.1s ease-in-out;
 }
+
+
