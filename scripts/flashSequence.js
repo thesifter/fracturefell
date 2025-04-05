@@ -36,7 +36,7 @@ function playFlashSequence(sequence) {
   function showFrame(item) {
     flashOverlay.innerHTML = '';
     flashOverlay.style.opacity = 1;
-
+console.log('[flashSequence] Loading image:', item.source);
     if (item.type === 'image') {
       const img = document.createElement('img');
       Object.assign(img.style, {
