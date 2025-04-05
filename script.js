@@ -1,4 +1,4 @@
-document.querySelectorAll('p').forEach(el => {
+document.querySelectorAll('.glitch').forEach(el => {
   el.addEventListener('mouseenter', () => {
     el.classList.add('glitched');
   });
