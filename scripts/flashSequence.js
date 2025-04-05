@@ -1,3 +1,4 @@
+console.log('[flashSequence] Module loaded.');
 export function initFlashSequence() {
   fetch(`./data/flash_data.json?v=${Date.now()}`)
   .then(response => response.json())
