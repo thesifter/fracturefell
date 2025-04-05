@@ -1,62 +1,76 @@
 export function initFlashSequence() {
   fetch('./data/flash_data.json')
     .then(response => response.json())
-    .then(sequence => playFlashSequence(sequence));
+    .then(sequence => {
+      setTimeout(() => playFlashSequence(sequence), 500); // Pre-flash tension
+    });
 }
 
 function playFlashSequence(sequence) {
   const flashOverlay = document.createElement('div');
-  flashOverlay.style.position = 'fixed';
-  flashOverlay.style.top = 0;
-  flashOverlay.style.left = 0;
-  flashOverlay.style.width = '100vw';
-  flashOverlay.style.height = '100vh';
-  flashOverlay.style.zIndex = '99999';
-  flashOverlay.style.backgroundColor = '#000';
-  flashOverlay.style.display = 'flex';
-  flashOverlay.style.justifyContent = 'center';
-  flashOverlay.style.alignItems = 'center';
-  flashOverlay.style.color = '#fff';
-  flashOverlay.style.fontFamily = 'monospace';
-  flashOverlay.style.fontSize = '1.5rem';
-  flashOverlay.style.textAlign = 'center';
-  flashOverlay.style.transition = 'opacity 0.3s ease';
+  
+  Object.assign(flashOverlay.style, {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    zIndex: 99999,
+    backgroundColor: '#000',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    transition: 'opacity 0.4s ease',
+    opacity: 0,
+    pointerEvents: 'none'
+  });
+
   document.body.appendChild(flashOverlay);
 
   let i = 0;
 
-  function next() {
-    if (i >= sequence.length) {
-      flashOverlay.remove();
-      return;
-    }
-
-    const item = sequence[i];
+  function showFrame(item) {
     flashOverlay.innerHTML = '';
+    flashOverlay.style.opacity = 1;
 
     if (item.type === 'image') {
       const img = document.createElement('img');
+      Object.assign(img.style, {
+        maxWidth: '100vw',
+        maxHeight: '100vh',
+        objectFit: 'contain',
+        marginBottom: '1rem'
+      });
       img.src = item.source;
-      img.style.maxWidth = '100vw';
-      img.style.maxHeight = '100vh';
-      img.style.objectFit = 'contain';
       flashOverlay.appendChild(img);
 
       if (item.caption) {
         const caption = document.createElement('div');
         caption.textContent = item.caption;
-        caption.style.position = 'absolute';
-        caption.style.bottom = '2rem';
-        caption.style.width = '100%';
-        caption.style.textAlign = 'center';
-        caption.style.color = 'white';
+        Object.assign(caption.style, {
+          color: 'white',
+          fontFamily: 'monospace',
+          fontSize: '1.25rem',
+          textAlign: 'center'
+        });
         flashOverlay.appendChild(caption);
       }
     }
 
-    i++;
-    setTimeout(next, item.duration || 200);
+    setTimeout(() => {
+      flashOverlay.style.opacity = 0;
+      setTimeout(nextFrame, 300); // Fade-out delay between frames
+    }, item.duration || 300);
   }
 
-  next();
+  function nextFrame() {
+    if (i < sequence.length) {
+      showFrame(sequence[i++]);
+    } else {
+      flashOverlay.remove();
+    }
+  }
+
+  nextFrame();
 }
