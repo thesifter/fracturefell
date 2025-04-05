@@ -1,9 +1,10 @@
 export function initFlashSequence() {
-  fetch('./data/flash_data.json')
-    .then(response => response.json())
-    .then(sequence => {
-      setTimeout(() => playFlashSequence(sequence), 500); // Pre-flash tension
-    });
+  fetch(`./data/flash_data.json?v=${Date.now()}`)
+  .then(response => response.json())
+  .then(sequence => {
+    setTimeout(() => playFlashSequence(sequence), 500);
+  });
+
 }
 
 function playFlashSequence(sequence) {
