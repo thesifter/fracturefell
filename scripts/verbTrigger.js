@@ -20,6 +20,7 @@ console.log('[verbTrigger] Element added to DOM:', verbTrigger);
   verbTrigger.addEventListener('click', () => {
     console.log('[verbTrigger] Clicked!');
     import('./flashSequence.js').then(mod => {
+      console.log('import(./flashSequence.js!');
       mod.initFlashSequence();
     });
   });
