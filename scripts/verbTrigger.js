@@ -5,8 +5,8 @@ export function initVerbTrigger(verbs) {
 
   const verbTrigger = document.createElement('div');
   verbTrigger.id = 'verbTrigger';
-  verbTrigger.textContent = verbs[currentVerb];
   verbTrigger.classList.add('verb-sigil');
+  verbTrigger.textContent = verbs[currentVerb];
 
   document.body.appendChild(verbTrigger);
 
@@ -16,7 +16,7 @@ export function initVerbTrigger(verbs) {
     verbTrigger.textContent = verbs[currentVerb];
   }, 2000);
 
-  // Ritual activation
+  // Ritual trigger
   verbTrigger.addEventListener('click', () => {
     import('./flashSequence.js').then(mod => {
       mod.initFlashSequence();
