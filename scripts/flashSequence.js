@@ -11,7 +11,7 @@ export function initFlashSequence() {
 
 function playFlashSequence(sequence) {
   const flashOverlay = document.createElement('div');
-  
+  console.log('[playFlashSequence] function.');
   Object.assign(flashOverlay.style, {
     position: 'fixed',
     top: 0,
