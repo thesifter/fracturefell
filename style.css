@@ -1,0 +1,4 @@
+.glitched {
+  text-shadow: 2px 2px red, -2px -2px cyan;
+  transform: skewX(10deg);
+}
