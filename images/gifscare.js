@@ -15,7 +15,7 @@
 
   function showMindFlash() {
     const flash = document.createElement('img');
-    flash.src = 'assets/fracturefell_flash.gif';
+    flash.src = 'fracturefell_flash.gif';
     flash.alt = 'fracture glimpse';
     flash.style.position = 'fixed';
     flash.style.top = '50%';
