@@ -1,0 +1,23 @@
+[
+  {
+    "id": "frame1",
+    "type": "image",
+    "source": "./images/flash_glyphrupture.jpg",
+    "caption": "— containment field failed. rupture expanded.",
+    "duration": 200
+  },
+  {
+    "id": "frame2",
+    "type": "image",
+    "source": "./images/flash_teeth.jpg",
+    "caption": "— consumption event recorded.",
+    "duration": 200
+  },
+  {
+    "id": "frame3",
+    "type": "image",
+    "source": "./images/flash_seal.jpg",
+    "caption": "— it carried light and memory.",
+    "duration": 250
+  }
+]
