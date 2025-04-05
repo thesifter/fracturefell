@@ -1,9 +1,9 @@
 body {
   background: radial-gradient(
     circle at top left,
-    #1c2b38,   /* muted midnight blue (faint ghostlight) */
+    #2a5c82,   /* muted midnight blue (faint ghostlight) */
     #4c6b32,   /* murky olive-brown */
-    #4a2e1e    /* heavy earth brown */
+    #3b2417    /* heavy earth brown */
   );
   color: #e2e2e2;
   font-family: monospace;
