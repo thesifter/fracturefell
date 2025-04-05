@@ -23,3 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => img.remove(), 1500);
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const bait = document.getElementById('soundbait');
+  const audio = new Audio('./sounds/static_click.mp3'); // Make sure you upload this file!
+
+  bait.addEventListener('click', () => {
+    audio.play();
+  });
+})
