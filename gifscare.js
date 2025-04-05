@@ -18,7 +18,7 @@
     flash.src = window.location.origin + 'images/fracturefell_flash.gif';
     flash.alt = 'fracture glimpse';
     flash.style.position = 'fixed';
-    flash.style.top = '50%';e
+    flash.style.top = '50%';
     flash.style.left = '50%';
     flash.style.transform = 'translate(-50%, -50%)';
     flash.style.zIndex = 9999;
