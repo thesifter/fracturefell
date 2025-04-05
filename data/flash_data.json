@@ -1,23 +1,44 @@
 [
   {
-    "id": "frame1",
+    "id": "FF1",
     "type": "image",
-    "source": "./images/flash_glyphrupture.jpg",
-    "caption": "— containment field failed. rupture expanded.",
-    "duration": 200
+    "source": "./images/FF1.png",
+    "caption": "— FF1 initiated."
   },
   {
-    "id": "frame2",
+    "id": "FF2",
     "type": "image",
-    "source": "./images/flash_teeth.jpg",
-    "caption": "— consumption event recorded.",
-    "duration": 200
+    "source": "./images/FF2.png",
+    "caption": "— FF2 confirmed."
   },
   {
-    "id": "frame3",
+    "id": "FF3",
     "type": "image",
-    "source": "./images/flash_seal.jpg",
-    "caption": "— it carried light and memory.",
-    "duration": 250
+    "source": "./images/FF3.png",
+    "caption": "— FF3 anomaly."
+  },
+  {
+    "id": "FF4",
+    "type": "image",
+    "source": "./images/FF4.png",
+    "caption": "— FF4 breached."
+  },
+  {
+    "id": "FF5",
+    "type": "image",
+    "source": "./images/FF5.png",
+    "caption": "— FF5 corrupted."
+  },
+  {
+    "id": "FF6",
+    "type": "image",
+    "source": "./images/FF6.png",
+    "caption": "— FF6: memory echo."
+  },
+  {
+    "id": "FF7",
+    "type": "image",
+    "source": "./images/FF7.png",
+    "caption": "— FF7 transmission ended."
   }
 ]
