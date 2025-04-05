@@ -6,20 +6,7 @@ export function initVerbTrigger(verbs) {
   const verbTrigger = document.createElement('div');
   verbTrigger.id = 'verbTrigger';
   verbTrigger.textContent = verbs[currentVerb];
-  Object.assign(verbTrigger.style, {
-    position: 'fixed',
-    top: '1rem',
-    right: '1rem',
-    color: '#fff',
-    fontFamily: 'monospace',
-    fontSize: '1rem',
-    zIndex: 9999,
-    cursor: 'pointer',
-    background: 'rgba(0,0,0,0.2)',
-    padding: '0.25rem 0.5rem',
-    borderRadius: '4px',
-    transition: 'opacity 0.3s ease'
-  });
+  verbTrigger.classList.add('verb-sigil');
 
   document.body.appendChild(verbTrigger);
 
