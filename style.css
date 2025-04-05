@@ -2,7 +2,7 @@ body {
   background: radial-gradient(
     circle at top left,
     #1c2b38,   /* muted midnight blue (faint ghostlight) */
-    #3e3a2f,   /* murky olive-brown */
+    #4c6b32,   /* murky olive-brown */
     #4a2e1e    /* heavy earth brown */
   );
   color: #e2e2e2;
