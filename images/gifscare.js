@@ -8,7 +8,7 @@
     return (
       x > (vw / 2 - marginX) &&
       x < (vw / 2 + marginX) &&
-      y > (vh / 2 - marginY) &&e
+      y > (vh / 2 - marginY) &&
       y < (vh / 2 + marginY)
     );
   }
