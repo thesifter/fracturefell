@@ -1,4 +1,12 @@
+body {
+  background: #0e0e0e;
+  color: #e2e2e2;
+  font-family: monospace;
+  padding: 2rem;
+}
+
 .glitched {
-  text-shadow: 2px 2px red, -2px -2px cyan;
-  transform: skewX(10deg);
+  text-shadow: 2px 0 red, -2px 0 cyan;
+  transform: skewX(3deg);
+  transition: all 0.1s ease-in-out;
 }
