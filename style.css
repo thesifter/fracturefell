@@ -16,5 +16,22 @@ body {
   transform: skewX(3deg);
   transition: all 0.1s ease-in-out;
 }
+.verb-sigil {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem 0.5rem;
+  font-family: monospace;
+  font-size: 1rem;
+  border-radius: 4px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+.verb-sigil:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 
