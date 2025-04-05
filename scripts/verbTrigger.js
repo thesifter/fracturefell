@@ -19,7 +19,7 @@ console.log('[verbTrigger] Element added to DOM:', verbTrigger);
   // Ritual trigger
   verbTrigger.addEventListener('click', () => {
     console.log('[verbTrigger] Clicked!');
-    import('./flashSequence.js').then(mod => {
+    import('./scripts/flashSequence.js').then(mod => {
       mod.initFlashSequence();
     });
   });
