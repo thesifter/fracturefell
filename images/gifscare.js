@@ -1,4 +1,4 @@
-.(function () {
+(function () {
   function isWithinCenterZone(x, y) {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
