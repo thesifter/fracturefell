@@ -1,44 +1,44 @@
 [
   {
-    "id": "FF1",
+    "id": "ff1",
     "type": "image",
-    "source": "./images/FF1.png",
-    "caption": "— FF1 initiated."
+    "source": "./images/ff1.png",
+    "caption": "— ff1 initiated."
   },
   {
-    "id": "FF2",
+    "id": "ff2",
     "type": "image",
-    "source": "./images/FF2.png",
-    "caption": "— FF2 confirmed."
+    "source": "./images/ff2.png",
+    "caption": "— ff2 confirmed."
   },
   {
-    "id": "FF3",
+    "id": "ff3",
     "type": "image",
-    "source": "./images/FF3.png",
-    "caption": "— FF3 anomaly."
+    "source": "./images/ff3.png",
+    "caption": "— ff3 anomaly."
   },
   {
-    "id": "FF4",
+    "id": "ff4",
     "type": "image",
-    "source": "./images/FF4.png",
-    "caption": "— FF4 breached."
+    "source": "./images/ff4.png",
+    "caption": "— ff4 breached."
   },
   {
-    "id": "FF5",
+    "id": "ff5",
     "type": "image",
-    "source": "./images/FF5.png",
-    "caption": "— FF5 corrupted."
+    "source": "./images/ff5.png",
+    "caption": "— ff5 corrupted."
   },
   {
-    "id": "FF6",
+    "id": "ff6",
     "type": "image",
-    "source": "./images/FF6.png",
-    "caption": "— FF6: memory echo."
+    "source": "./images/ff6.png",
+    "caption": "— ff6: memory echo."
   },
   {
-    "id": "FF7",
+    "id": "ff7",
     "type": "image",
-    "source": "./images/FF7.png",
-    "caption": "— FF7 transmission ended."
+    "source": "./images/ff7.png",
+    "caption": "— ff7 transmission ended."
   }
 ]
