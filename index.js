@@ -1,7 +1,9 @@
 import './scripts/verbTrigger.js';
 import { renderLoreEntry } from './scripts/loreRenderer.js';
 import { releaseZergling } from './scripts/zerglings.js';
-
+  // Zergs
+  import { releaseZergling } from './scripts/zerglings.js';
+releaseZergling(); // fires once when dev loads
 const DEV_MODE = window.location.search.includes('ritual=dev');
 
 if (DEV_MODE) {
@@ -40,8 +42,5 @@ if (DEV_MODE) {
     .catch(err => {
       console.error('[lore] Failed to load lore.json for render:', err);
     });
-  // Zergs
-  import { releaseZergling } from './scripts/zerglings.js';
-releaseZergling(); // fires once when dev loads
-
+  
 }
