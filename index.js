@@ -1,6 +1,6 @@
 
 import { initVerbTrigger } from './scripts/verbTrigger.js';
-
+import { renderLoreEntry } from './scripts/loreRenderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -33,7 +33,6 @@ if (DEV_MODE) {
       console.error('[lore] Failed to load or parse lore.json:', err);
     });
 };
-import { renderLoreEntry } from './scripts/loreRenderer.js';
 
 fetch('./data/lore.json?v=' + Date.now())
   .then(res => res.json())
