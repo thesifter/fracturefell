@@ -46,6 +46,9 @@ console.log('[flashSequence] Loading image:', item.source);
         marginBottom: '1rem'
       });
       img.src = item.source;
+      console.log('[frame] Item:', item);
+console.log('[frame] Image source:', item?.source);
+
       flashOverlay.appendChild(img);
 
       if (item.caption) {
