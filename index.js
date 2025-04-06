@@ -46,7 +46,6 @@ fetch('./data/lore.json?v=' + Date.now())
       container.appendChild(el);
     });
   });
-import { renderLoreEntry } from './scripts/loreRenderer.js';
 
 const DEV_MODE = window.location.search.includes('ritual=dev');
 
