@@ -33,4 +33,32 @@ body {
 .verb-sigil:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+.lore-entry {
+  font-family: monospace;
+  color: #e2e2e2;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 720px;
+  border-left: 3px solid #555;
+  border-radius: 4px;
+}
+
+.lore-entry h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  color: #f5f5f5;
+}
+
+.lore-date {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.lore-tags {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #8fd;
+}
 
