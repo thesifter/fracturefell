@@ -1,4 +1,4 @@
-import { initFlashSequence } from './scripts/flashSequence.js';
+
 import { initVerbTrigger } from './scripts/verbTrigger.js';
 
 
@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
       initVerbTrigger(data.verbs || []);
-      initFlashSequence();
     });
 });
 const DEV_MODE = window.location.search.includes('ritual=dev');
