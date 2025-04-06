@@ -32,5 +32,20 @@ if (DEV_MODE) {
     .catch(err => {
       console.error('[lore] Failed to load or parse lore.json:', err);
     });
-}
+};
+import { renderLoreEntry } from './scripts/loreRenderer.js';
+
+fetch('./data/lore.json?v=' + Date.now())
+  .then(res => res.json())
+  .then(lore => {
+    const container = document.createElement('div');
+    container.id = 'lore-container';
+    document.body.appendChild(container);
+
+    lore.forEach(entry => {
+      const el = renderLoreEntry(entry);
+      container.appendChild(el);
+    });
+  });
+
 
