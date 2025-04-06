@@ -47,7 +47,7 @@ if (DEV_MODE) {
     .catch(err => {
       console.error('[lore] Failed to load lore.json:', err);
     }); 
-    /*
+    */
 };
 
 
