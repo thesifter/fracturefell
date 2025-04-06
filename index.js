@@ -1,6 +1,5 @@
-
 import { initVerbTrigger } from './scripts/verbTrigger.js';
-//import { renderLoreEntry } from './scripts/loreRenderer.js';
+import { renderLoreEntry } from './scripts/loreRenderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
