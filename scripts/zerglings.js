@@ -11,18 +11,16 @@ export function releaseZergling() {
   };
   console.log(`[zerglings] Releasing ${id}`);
 
+  // Create the zergling image
   const zerg = document.createElement('img');
 
-  // Use the properly formatted base64 string here
- const spriteSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8k/JiAAAAWlBMVEX///8AAAB9fnB2Wm7+yv1IUD0kQSZ3z6o0yUeot/lfKD1lP0m2fJSVgSo9O0d3Zk0gXP0L3n0XbQu1r1ShcHkm3rnxhK8QDJwOBhZnI2Fd+dRVwBCfNHTUdxubmMT+aH6urB2HqXvgp1r64D64Y0A5nrfZm5u+zwVJcC8cZmDEIoH1ppGv4bZV5nbPTq6FL1ZGmiLDX0d1FbWvG44mNC7g8V1tZk43fN5g7zYLB2E5ZqNKb2T7wy0xGQ2bFj9FVbwZjrCZyrlm6W5pK4w7BchIt6WqRINP6SdxOmyqv7V0gBHzUbqAAAAAElFTkSuQmCC';
+  // Use the known image (FF1.png or any other FF image)
+  zerg.src = './images/FF1.png';  // Make sure this is the correct file name and path
 
-  
-  zerg.src = spriteSrc;
-
-
-  zerg.src = spriteSrc;
+  // Add zergling class
   zerg.classList.add('zergling');
 
+  // Style it to position it and animate it across the screen
   Object.assign(zerg.style, {
     position: 'fixed',
     bottom: '0',
@@ -35,12 +33,16 @@ export function releaseZergling() {
     transition: 'left 3.5s linear'
   });
 
+  // Append it to the body
   document.body.appendChild(zerg);
 
+  // Trigger animation: move it across the screen
   requestAnimationFrame(() => {
-    zerg.style.left = '100vw';
+    zerg.style.left = '100vw';  // Move to the right side of the screen
   });
 
+  // Remove the zerg after animation ends
   setTimeout(() => zerg.remove(), 4000);
 }
+
 
