@@ -1,1 +1,18 @@
-test;
+[
+  {
+    "id": "glyph004",
+    "title": "We Found the Map Too Late",
+    "type": "journal",
+    "content": "It was already bleeding when we opened it.",
+    "tags": ["map", "failure", "echo"],
+    "published": "2025-04-07"
+  },
+  {
+    "id": "entity-seal",
+    "title": "The Seal of Light",
+    "type": "image",
+    "content": "The creature breached with no warning. It smiled.",
+    "tags": ["ocean", "joy", "final"],
+    "published": "2025-04-07"
+  }
+]
