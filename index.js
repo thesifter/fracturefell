@@ -32,7 +32,7 @@ if (DEV_MODE) {
       console.error('[lore] Failed to load or parse lore.json:', err);
     });
   //Lore
-*/*  fetch('./data/lore.json?v=' + Date.now())
+/*  fetch('./data/lore.json?v=' + Date.now())
     .then(res => res.json())
     .then(lore => {
       const container = document.createElement('div');
