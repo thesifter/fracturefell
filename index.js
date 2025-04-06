@@ -1,6 +1,5 @@
 import './scripts/verbTrigger.js';
 import { renderLoreEntry } from './scripts/loreRenderer.js';
-import { releaseZergling } from './scripts/zerglings.js';
   // Zergs
   import { releaseZergling } from './scripts/zerglings.js';
 releaseZergling(); // fires once when dev loads
