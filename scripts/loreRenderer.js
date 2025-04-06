@@ -1,6 +1,31 @@
 // scripts/loreRenderer.js
+// Handles rendering lore entries into the DOM
+// Supports multiple lore types, including "shortform"
 
 export function renderLoreEntry(entry) {
+  // ✨ Handle SHORTFORM entries first
+  if (entry.type === 'shortform') {
+    console.log(`[loreRenderer] Rendering shortform entry: ${entry.id}`);
+
+    const container = document.createElement('div');
+    container.classList.add('lore-entry', 'shortform');
+
+    // Add timestamp and title together
+    const header = document.createElement('h2');
+    header.textContent = `[${entry.timestamp || '???'}] ${entry.title || 'Untitled'}`;
+    container.appendChild(header);
+
+    // Add full story content with line breaks
+    const body = document.createElement('p');
+    body.innerHTML = (entry.full || '[No content]').replace(/\n/g, '<br>');
+    container.appendChild(body);
+
+    // Finally append to the document body
+    document.body.appendChild(container);
+    return;
+  }
+
+  // 🧱 Default entry rendering for other types (e.g. logs, standard lore)
   const container = document.createElement('div');
   container.classList.add('lore-entry');
 
@@ -9,7 +34,7 @@ export function renderLoreEntry(entry) {
   title.textContent = entry.title || 'Untitled Entry';
   container.appendChild(title);
 
-  // Published date
+  // Optional: Published date
   if (entry.published) {
     const published = document.createElement('div');
     published.classList.add('lore-date');
@@ -22,7 +47,7 @@ export function renderLoreEntry(entry) {
   content.textContent = entry.content || '[No content provided]';
   container.appendChild(content);
 
-  // Tags
+  // Optional: Tags
   if (entry.tags && Array.isArray(entry.tags)) {
     const tags = document.createElement('div');
     tags.classList.add('lore-tags');
@@ -30,9 +55,10 @@ export function renderLoreEntry(entry) {
     container.appendChild(tags);
   }
 
-  return container;
+  document.body.appendChild(container);
 }
 
+// 🔧 Helper to prettify ISO timestamps
 function formatDate(iso) {
   try {
     return new Date(iso).toLocaleDateString(undefined, {
