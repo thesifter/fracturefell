@@ -1,4 +1,4 @@
-import { initVerbTrigger } from './scripts/verbTrigger.js';
+import './scripts/verbTrigger.js';
 import { renderLoreEntry } from './scripts/loreRenderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
