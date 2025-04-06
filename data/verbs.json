@@ -1,0 +1,1272 @@
+[
+  {
+    "text": "absorb",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "ache",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "align",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "arch",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "ask",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "avert",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "bang",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "bark",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "bathe",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "be",
+    "charged": false,
+    "type": "ritual"
+  },
+  {
+    "text": "beg",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "bend",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "blink",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "blister",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "blow",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "blur",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "boil",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "break",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "breathe",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "bruise",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "build",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "burn",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "burst",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "bury",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "buy",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "carve",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "chase",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "chew",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "chill",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "choose",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "choke",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "click",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "climb",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "clutch",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "collect",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "collapse",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "consume",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "control",
+    "charged": true,
+    "type": "vision"
+  },
+  {
+    "text": "cough",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "crack",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "crawl",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "create",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "crush",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "cry",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "curl",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "cut",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "damage",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "dance",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "decay",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "deceive",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "deflect",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "deny",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "descend",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "destroy",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "devour",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "dig",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "disconnect",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "dissolve",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "distort",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "divide",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "drag",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "draw",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "dream",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "drink",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "drop",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "drown",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "dry",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "eject",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "emerge",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "embrace",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "empty",
+    "charged": false,
+    "type": "existential"
+  },
+  {
+    "text": "endure",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "escape",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "evaporate",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "examine",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "exhale",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "explode",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "fall",
+    "charged": true,
+    "type": "vision"
+  },
+  {
+    "text": "fear",
+    "charged": true,
+    "type": "vision"
+  },
+  {
+    "text": "feed",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "feel",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "fetch",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "fight",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "fill",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "find",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "flee",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "flicker",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "flow",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "flush",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "fold",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "follow",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "forget",
+    "charged": false,
+    "type": "ritual"
+  },
+  {
+    "text": "freeze",
+    "charged": false,
+    "type": "ritual"
+  },
+  {
+    "text": "fuck",
+    "charged": false,
+    "type": "existential"
+  },
+  {
+    "text": "gasp",
+    "charged": false,
+    "type": "ritual"
+  },
+  {
+    "text": "gather",
+    "charged": true,
+    "type": "vision"
+  },
+  {
+    "text": "giggle",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "give",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "glare",
+    "charged": false,
+    "type": "existential"
+  },
+  {
+    "text": "glitch",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "gnaw",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "grasp",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "grind",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "grow",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "hang",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "haunt",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "heal",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "hear",
+    "charged": false,
+    "type": "ritual"
+  },
+  {
+    "text": "hide",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "hold",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "hum",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "hurt",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "inhale",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "inject",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "invite",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "jump",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "kick",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "kill",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "kiss",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "knock",
+    "charged": true,
+    "type": "vision"
+  },
+  {
+    "text": "know",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "laugh",
+    "charged": false,
+    "type": "ritual"
+  },
+  {
+    "text": "leak",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "leave",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "lick",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "lie",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "lift",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "light",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "listen",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "live",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "lock",
+    "charged": false,
+    "type": "existential"
+  },
+  {
+    "text": "look",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "lose",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "love",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "mark",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "melt",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "mimic",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "miss",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "moan",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "move",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "mutter",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "nod",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "open",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "outlast",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "pant",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "pass",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "peer",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "pierce",
+    "charged": true,
+    "type": "breath"
+  },
+  {
+    "text": "pinch",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "play",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "pluck",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "plunge",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "point",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "pray",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "press",
+    "charged": false,
+    "type": "ritual"
+  },
+  {
+    "text": "pull",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "punch",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "push",
+    "charged": true,
+    "type": "vision"
+  },
+  {
+    "text": "quiver",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "reach",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "react",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "read",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "reclaim",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "reflect",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "release",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "remember",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "repair",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "replace",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "resist",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "rest",
+    "charged": true,
+    "type": "vision"
+  },
+  {
+    "text": "rip",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "rise",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "roll",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "rot",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "run",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "rupture",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "scratch",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "scream",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "search",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "see",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "seek",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "shake",
+    "charged": false,
+    "type": "existential"
+  },
+  {
+    "text": "shatter",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "shed",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "shine",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "shift",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "shiver",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "shout",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "show",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "shrink",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "shudder",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "sigh",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "sing",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "sit",
+    "charged": true,
+    "type": "existential"
+  },
+  {
+    "text": "skin",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "skip",
+    "charged": false,
+    "type": "body"
+  },
+  {
+    "text": "slap",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "sleep",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "slip",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "smell",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "smile",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "snap",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "sniff",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "sob",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "soak",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "speak",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "spit",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "split",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "stand",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "stare",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "stay",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "steal",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "step",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "sting",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "stretch",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "strike",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "strip",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "struggle",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "suck",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "suffocate",
+    "charged": true,
+    "type": "sound"
+  },
+  {
+    "text": "survive",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "sweat",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "swallow",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "swim",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "swing",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "take",
+    "charged": true,
+    "type": "mental"
+  },
+  {
+    "text": "tap",
+    "charged": false,
+    "type": "movement"
+  },
+  {
+    "text": "taste",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "tear",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "think",
+    "charged": true,
+    "type": "emotional"
+  },
+  {
+    "text": "throb",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "throw",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "tick",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "touch",
+    "charged": false,
+    "type": "sound"
+  },
+  {
+    "text": "trace",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "tremble",
+    "charged": false,
+    "type": "vision"
+  },
+  {
+    "text": "try",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "turn",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "twist",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "uncover",
+    "charged": true,
+    "type": "movement"
+  },
+  {
+    "text": "vanish",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "vomit",
+    "charged": false,
+    "type": "emotional"
+  },
+  {
+    "text": "wait",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "walk",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "want",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "watch",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "weep",
+    "charged": false,
+    "type": "mental"
+  },
+  {
+    "text": "whisper",
+    "charged": true,
+    "type": "body"
+  },
+  {
+    "text": "wince",
+    "charged": false,
+    "type": "breath"
+  },
+  {
+    "text": "wipe",
+    "charged": false,
+    "type": "impact"
+  },
+  {
+    "text": "wish",
+    "charged": false,
+    "type": "existential"
+  },
+  {
+    "text": "writhe",
+    "charged": true,
+    "type": "ritual"
+  },
+  {
+    "text": "yawn",
+    "charged": true,
+    "type": "impact"
+  },
+  {
+    "text": "yell",
+    "charged": false,
+    "type": "emotional"
+  }
+]
