@@ -62,3 +62,9 @@ body {
   color: #8fd;
 }
 
+#verbTrigger.charged {
+  color: #ff5e8b;
+  text-shadow: 0 0 6px #ff5e8b;
+  font-style: italic;
+}
+
