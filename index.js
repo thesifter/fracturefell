@@ -39,4 +39,8 @@ if (DEV_MODE) {
     .catch(err => {
       console.error('[lore] Failed to load lore.json for render:', err);
     });
+  // Zergs
+  import { releaseZergling } from './scripts/zerglings.js';
+releaseZergling(); // fires once when dev loads
+
 }
