@@ -1,18 +1,7 @@
 import './scripts/verbTrigger.js';
 import { renderLoreEntry } from './scripts/loreRenderer.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const isRitualDev = urlParams.get('ritual') === 'dev';
 
-  if (!isRitualDev) return;
-
-  fetch('./data/flash_data.json?v=' + Date.now())
-    .then(res => res.json())
-    .then(data => {
-      initVerbTrigger(data.verbs || []);
-    });
-});
 const DEV_MODE = window.location.search.includes('ritual=dev');
 
 if (DEV_MODE) {
