@@ -1,5 +1,6 @@
 import './scripts/verbTrigger.js';
 import { renderLoreEntry } from './scripts/loreRenderer.js';
+import { releaseZergling } from './scripts/zerglings.js';
 
 const DEV_MODE = window.location.search.includes('ritual=dev');
 
