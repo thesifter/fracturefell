@@ -1,0 +1,42 @@
+/* styles/components.css */
+
+/* Lore Entry Styles */
+.lore-entry {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-left: 3px solid #444;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #ddd;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.lore-entry h2 {
+  margin-bottom: 0.5rem;
+}
+
+.lore-date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+}
+
+.lore-tags {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #8fd;
+}
+
+/* Zergling Styles */
+.zergling {
+  width: 128px;
+  height: 128px;
+  image-rendering: pixelated;
+  position: fixed;
+  bottom: 32px;
+  left: -128px;
+  z-index: 10000;
+  transition: left 4s linear;
+}
