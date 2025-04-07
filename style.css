@@ -40,6 +40,45 @@ body {
   text-shadow: 0 0 6px #8fd;
   transform: skewX(1deg) rotate(0.5deg);
 }
+/* Default heading state */
+.lore-entry h2 {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Glitch 1 */
+.glitch-1:hover,
+.glitch-1:focus {
+  text-shadow: 3px 2px #ff0000, -3px -2px #00ffff;
+  transform: rotate(1.5deg) scale(1.1) skewX(8deg);
+}
+
+/* Glitch 2 */
+.glitch-2:hover,
+.glitch-2:focus {
+  text-shadow: -4px 0 #ff00ff, 4px 0 #00ff00;
+  transform: scale(1.2) rotate(-2deg) skewY(12deg);
+}
+
+/* Glitch 3 */
+.glitch-3:hover,
+.glitch-3:focus {
+  text-shadow: 0 0 8px #0ff, 0 0 4px #f0f;
+  transform: scale(1.15) rotate(0.5deg) skew(6deg, 6deg);
+}
+
+/* Glitch 4 */
+.glitch-4:hover,
+.glitch-4:focus {
+  text-shadow: 2px 2px #ff0055, -2px -2px #00ffff;
+  transform: translateX(-2px) rotate(4deg) scale(1.25);
+}
+
+/* Glitch 5 */
+.glitch-5:hover,
+.glitch-5:focus {
+  text-shadow: 0 0 12px #8fd, 2px 0 #f00, -2px 0 #0ff;
+  transform: rotate(-3deg) skewX(-10deg) scale(1.1);
+}
 
 .verb-sigil {
   position: fixed;
