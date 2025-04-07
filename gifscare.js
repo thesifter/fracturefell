@@ -49,3 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// todo: add in mobile scareZone.addEventListener('touchstart', triggerGIF); // For mobile touch events
+// refactor to module and put in scripts folder.
+
