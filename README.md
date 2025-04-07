@@ -19,7 +19,7 @@ But what started as a simple idea turned into an **exciting journey**, filled wi
 
 You can view the project in action on **GitHub Pages**. Here's the link to the live demo:
 
-[Check out Fracturefell 🎮](https://thesifter.github.io/Fracturefell) 🌟
+[Check out Fracturefell 🎮](https://thesifter.github.io/fracturefell/) 🌟
 
 (Note: Replace `username` and `repo-name` with the appropriate GitHub username and repository name)
 
