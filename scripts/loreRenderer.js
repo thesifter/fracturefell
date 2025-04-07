@@ -43,9 +43,14 @@ export function renderLoreEntry(entry) {
       const img = document.createElement('img');
       img.src = entry.image || `./images/${entry.slug}.jpg`;
       img.alt = entry.title || 'Lore image';
-      img.classList.add('lore-image', 'lore-image-thumb');
+      img.classList.add('lore-image');
       img.style.cursor = 'zoom-in';
 
+      const thumb = document.createElement('img');
+      thumb.classList.add('lore-image-thumb');
+      thumb.src = entry.image || `./images/${entry.slug}.jpg`;
+      thumb.alt = entry.title || 'Lore image thumb';
+      container.appendChild(thumb);
 
       img.onload = () => {
         container.appendChild(img);
