@@ -1,8 +1,11 @@
 import './scripts/verbTrigger.js';
 import { renderLoreEntry } from './scripts/loreRenderer.js';
   // Zergs
-  import { releaseZergling } from './scripts/zerglings.js';
+import { releaseZergling } from './scripts/zerglings.js';
 releaseZergling(); // fires once when dev loads
+import { initScareZone } from './scripts/gifscare.js';
+initScareZone(); // Initialize the scare zone
+
 const DEV_MODE = window.location.search.includes('ritual=dev');
 
 if (DEV_MODE) {
