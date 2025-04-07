@@ -1,6 +1,6 @@
-# Web UI Adventure Fracturefell 🌌🖥️
+#  Fracturefell 🌌🖥️
 
-Welcome to the **Web UI Adventure**—an experimental project built in **pure browser-based development** (no IDEs, no terminals, just GitHub UI!) 🚀. This project is an **interactive blog** of sorts, with **quirky UI elements**, some **mystery lore**, and, of course, a **Zergling** 🦗.
+Welcome to the **Web UI Adventure Fracturefell **—an experimental project built in **pure browser-based development** (no IDEs, no terminals, just GitHub UI!) 🚀. This project is an **interactive blog** of sorts, with **quirky UI elements**, some **mystery lore**, and, of course, a **Zergling** 🦗.
 
 ## What is this project? 🤔
 
@@ -47,4 +47,4 @@ Big shoutout to **all the weird ideas** we came up with along the way. Also, spe
 
 ---
 
-Enjoy the **Web UI Adventure** and may your journey be full of code and good vibes! ✨
+Enjoy the **Fracturefell** and may your journey be full of code and good vibes! ✨
