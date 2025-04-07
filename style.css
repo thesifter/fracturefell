@@ -16,6 +16,31 @@ body {
   transform: skewX(3deg);
   transition: all 0.1s ease-in-out;
 }
+.glitch-1 {
+  text-shadow: 2px 0 red, -2px 0 cyan;
+  transform: skewX(2deg);
+}
+
+.glitch-2 {
+  text-shadow: -1px 0 magenta, 2px 0 lime;
+  transform: skewX(-4deg) rotate(-0.5deg);
+}
+
+.glitch-3 {
+  text-shadow: 0 0 4px #0ff, 0 0 2px #f0f;
+  transform: scale(1.05) rotate(1deg);
+}
+
+.glitch-4 {
+  text-shadow: 1px 1px #ff0055, -1px -1px #00ffff;
+  transform: translateY(-1px) skewX(5deg);
+}
+
+.glitch-5 {
+  text-shadow: 0 0 6px #8fd;
+  transform: skewX(1deg) rotate(0.5deg);
+}
+
 .verb-sigil {
   position: fixed;
   top: 1rem;
