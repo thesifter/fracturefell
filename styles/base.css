@@ -1,0 +1,21 @@
+//styles/base.css
+/* styles/base.css */
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(
+    circle at top left,
+    #2a5c82,   /* muted midnight blue (faint ghostlight) */
+    #4c6b32,   /* murky olive-brown */
+    #3b2417    /* heavy earth brown */
+  );
+  color: #e2e2e2;
+  font-family: monospace;
+  padding: 2rem;
+  min-height: 100vh;
+}
