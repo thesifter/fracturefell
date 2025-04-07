@@ -14,8 +14,7 @@ export function releaseZergling() {
   // Create the zergling image
   const zerg = document.createElement('img');
 
-  // Use the known image (FF1.png or any other FF image)
-  zerg.src = './images/ff1.png';  // Make sure this is the correct file name and path
+  zerg.src = './images/zergling.gif';  // Make sure this is the correct file name and path
 
   // Add zergling class
   zerg.classList.add('zergling');
