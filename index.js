@@ -11,6 +11,12 @@ import { initGlitchEffect } from './scripts/glitch.js';
 document.addEventListener('DOMContentLoaded', () => {
   initGlitchEffect();
 });
+import './scripts/verbTrigger.js';
+import { initDevMode } from './scripts/devMode.js';
+// Initialize dev mode, if applicable
+document.addEventListener('DOMContentLoaded', () => {
+  initDevMode();
+});
 
 const DEV_MODE = window.location.search.includes('ritual=dev');
 
