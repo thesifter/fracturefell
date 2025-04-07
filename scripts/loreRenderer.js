@@ -34,21 +34,30 @@ export function renderLoreEntry(entry) {
       break;
     }
 
-    case 'image': {
-      const img = document.createElement('img');
-      img.src = entry.image || `./images/${entry.slug}.jpg`;
-      img.alt = entry.title || 'Lore image';
-      img.classList.add('lore-image');
+  case 'image': {
+    const img = document.createElement('img');
+    img.src = entry.image || `./images/${entry.slug}.jpg`;
+    img.alt = entry.title || 'Lore image';
+    img.classList.add('lore-image');
+  
+    img.onload = () => {
       container.appendChild(img);
-
+  
       if (entry.content) {
         const caption = document.createElement('p');
         caption.classList.add('lore-caption');
         caption.textContent = entry.content;
         container.appendChild(caption);
       }
-      break;
-    }
+  };
+
+  img.onerror = () => {
+    console.warn(`[loreRenderer] Image not found for entry: ${entry.slug}`);
+    // Optional: show a placeholder or glitch block instead?
+  };
+
+  break;
+}
 
     case 'journal':
     default: {
