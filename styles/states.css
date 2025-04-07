@@ -1,0 +1,43 @@
+/* styles/states.css */
+
+/* Glitch Effects */
+.glitched {
+  text-shadow: 2px 0 red, -2px 0 cyan;
+  transform: skewX(3deg);
+  transition: all 0.1s ease-in-out;
+}
+
+/* Glitch 1 – violent skew left */
+.glitch-1:hover,
+.glitch-1:focus {
+  text-shadow: 3px 2px #ff0000, -3px -2px #00ffff;
+  transform: rotate(1.5deg) scale(1.1) skewX(-10deg);
+}
+
+/* Glitch 2 – rotational spiral right */
+.glitch-2:hover,
+.glitch-2:focus {
+  text-shadow: -4px 0 #ff00ff, 4px 0 #00ff00;
+  transform: scale(1.2) rotate(8deg) skewY(3deg);
+}
+
+/* Glitch 3 – explode upward with color bloom */
+.glitch-3:hover,
+.glitch-3:focus {
+  text-shadow: 0 -3px 6px #0ff, 0 -6px 8px #f0f;
+  transform: translateY(-6px) scale(1.05) skew(3deg, 2deg);
+}
+
+/* Glitch 4 – twitch hard to the right */
+.glitch-4:hover,
+.glitch-4:focus {
+  text-shadow: 5px 1px #ff0055, -2px -1px #00ffff;
+  transform: translateX(6px) rotate(-2deg) scale(1.15);
+}
+
+/* Glitch 5 – grow, lean upward like stretching */
+.glitch-5:hover,
+.glitch-5:focus {
+  text-shadow: 0 0 12px #8fd, 3px 0 #f00, -3px 0 #0ff;
+  transform: scale(1.25) rotate(3deg) skewY(-4deg);
+}
