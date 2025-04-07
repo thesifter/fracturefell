@@ -227,16 +227,19 @@ body {
   z-index: 10000;
   transition: left 4s linear;
 }
+
 .lore-image-thumb {
-  max-width: 100%;
+  width: 160px;      /* 👈 a clean, consistent thumbnail size */
   height: auto;
-  border-radius: 2px;
-  box-shadow: 0 0 4px rgba(255,255,255,0.1);
+  border-radius: 3px;
+  image-rendering: pixelated;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
   transition: transform 0.2s ease;
+  cursor: zoom-in;
+  margin-top: 0.5rem;
+}
+.lore-image-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
-.lore-image-thumb:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.25);
-  cursor: zoom-in;
-}
