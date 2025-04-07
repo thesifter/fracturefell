@@ -1,0 +1,18 @@
+/* styles/theme.css */
+:root {
+  --primary-color: #4c6b32;
+  --secondary-color: #2a5c82;
+  --tertiary-color: #3b2417;
+  --accent-color: #8fd;
+  --highlight-color: #e0b94a;
+}
+
+body {
+  background: radial-gradient(circle at top left, var(--primary-color), var(--secondary-color), var(--tertiary-color));
+  color: var(--highlight-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+}
