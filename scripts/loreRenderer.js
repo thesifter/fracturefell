@@ -1,6 +1,6 @@
 // scripts/loreRenderer.js
-// Handles rendering lore entries into the DOM (v2)
-// Supports: journal, shortform, image
+// Handles rendering lore entries into the DOM (v2.1)
+// Supports: journal, shortform, image + longform class handling
 
 export function renderLoreEntry(entry) {
   const glitchVariants = ['glitch-1', 'glitch-2', 'glitch-3', 'glitch-4', 'glitch-5'];
@@ -8,7 +8,12 @@ export function renderLoreEntry(entry) {
 
   const container = document.createElement('div');
   container.classList.add('lore-entry');
+
+  // Add type-based class
   if (entry.type) container.classList.add(`lore-${entry.type}`);
+  // Add longform modifier if applicable
+  if (entry.longform) container.classList.add('lore-longform');
+  // Add ID from slug for routing
   if (entry.slug) container.id = `lore-${entry.slug}`;
 
   // Title (all types)
@@ -17,7 +22,7 @@ export function renderLoreEntry(entry) {
   title.classList.add(randomGlitch());
   container.appendChild(title);
 
-  // Date
+  // Published date
   if (entry.published) {
     const published = document.createElement('div');
     published.classList.add('lore-date');
@@ -34,30 +39,29 @@ export function renderLoreEntry(entry) {
       break;
     }
 
-  case 'image': {
-    const img = document.createElement('img');
-    img.src = entry.image || `./images/${entry.slug}.jpg`;
-    img.alt = entry.title || 'Lore image';
-    img.classList.add('lore-image');
-  
-    img.onload = () => {
-      container.appendChild(img);
-  
-      if (entry.content) {
-        const caption = document.createElement('p');
-        caption.classList.add('lore-caption');
-        caption.textContent = entry.content;
-        container.appendChild(caption);
-      }
-  };
+    case 'image': {
+      const img = document.createElement('img');
+      img.src = entry.image || `./images/${entry.slug}.jpg`;
+      img.alt = entry.title || 'Lore image';
+      img.classList.add('lore-image');
 
-  img.onerror = () => {
-    console.warn(`[loreRenderer] Image not found for entry: ${entry.slug}`);
-    // Optional: show a placeholder or glitch block instead?
-  };
+      img.onload = () => {
+        container.appendChild(img);
 
-  break;
-}
+        if (entry.content) {
+          const caption = document.createElement('p');
+          caption.classList.add('lore-caption');
+          caption.textContent = entry.content;
+          container.appendChild(caption);
+        }
+      };
+
+      img.onerror = () => {
+        console.warn(`[loreRenderer] Image not found for entry: ${entry.slug}`);
+      };
+
+      break;
+    }
 
     case 'journal':
     default: {
@@ -79,6 +83,7 @@ export function renderLoreEntry(entry) {
   return container;
 }
 
+// Helper: format published date
 function formatDate(iso) {
   try {
     return new Date(iso).toLocaleDateString(undefined, {
