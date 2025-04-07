@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 import './scripts/verbTrigger.js';
 import { initDevMode } from './scripts/devMode.js';
+import { initLoreImageModal } from './scripts/loreImageModal.js';
+initLoreImageModal();
 // Initialize dev mode, if applicable
 document.addEventListener('DOMContentLoaded', () => {
   initDevMode();
