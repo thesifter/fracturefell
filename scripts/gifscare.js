@@ -1,4 +1,4 @@
-// gifscare.js – Scaretest-Bonewave v2
+// gifscare.js – Scaretest-Bonewave v3
 
 export function initScareZone() {
   // 🧱 SCARE ZONE SETUP
@@ -11,7 +11,19 @@ export function initScareZone() {
   scareZone.style.zIndex = '9999';
   scareZone.style.pointerEvents = 'auto'; // ensure it registers hover
 
-  document.body.appendChild(scareZone);
+  // Temporary invisible trigger area
+  // TODO: This is a placeholder for now until we implement the Zerg trigger.
+  // The Zerg trigger (interactive, fun experience) will replace this invisible trigger in a future release.
+  const invisibleTrigger = document.createElement('div');
+  invisibleTrigger.style.position = 'fixed';
+  invisibleTrigger.style.bottom = '0';
+  invisibleTrigger.style.left = '0';
+  invisibleTrigger.style.width = '50px';
+  invisibleTrigger.style.height = '50px';
+  invisibleTrigger.style.zIndex = '10000'; // Ensure it’s above content
+  invisibleTrigger.style.pointerEvents = 'auto'; // Register interaction
+
+  document.body.appendChild(invisibleTrigger);
 
   // 🎲 RANDOMIZED JUMPSCARE (40% chance)
   function triggerGIF() {
@@ -33,11 +45,11 @@ export function initScareZone() {
     }
   }
 
-  // Listen for mouse hover (desktop)
-  scareZone.addEventListener('mouseenter', triggerGIF);
+  // Listen for mouse hover (desktop) on the invisible trigger area
+  invisibleTrigger.addEventListener('mouseenter', triggerGIF);
 
   // Listen for touch on mobile (add touch event for mobile)
-  scareZone.addEventListener('touchstart', triggerGIF);
+  invisibleTrigger.addEventListener('touchstart', triggerGIF);
 
   // 🔊 SOUND BAIT ("Noise" Element) CLICK TRIGGER
   const bait = document.getElementById('soundbait');
