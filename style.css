@@ -72,4 +72,9 @@ body {
   width: 128px;
   height: 128px;
   image-rendering: pixelated;
+  position: fixed;
+  bottom: 32px; /* or 48px or however high you want */
+  left: -128px;
+  z-index: 10000;
+  transition: left 4s linear;
 }
