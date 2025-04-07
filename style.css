@@ -68,3 +68,8 @@ body {
   font-style: italic;
 }
 
+.zergling {
+  width: 128px;
+  height: 128px;
+  image-rendering: pixelated;
+}
