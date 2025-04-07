@@ -3,6 +3,10 @@
 // Supports multiple lore types, including "shortform"
 
 export function renderLoreEntry(entry) {
+  // 🎲 Random glitch class selector
+  const glitchVariants = ['glitch-1', 'glitch-2', 'glitch-3', 'glitch-4', 'glitch-5'];
+  const randomGlitch = () => glitchVariants[Math.floor(Math.random() * glitchVariants.length)];
+
   // ✨ Handle SHORTFORM entries
   if (entry.type === 'shortform') {
     console.log(`[loreRenderer] Rendering shortform entry: ${entry.id}`);
@@ -12,13 +16,14 @@ export function renderLoreEntry(entry) {
 
     const header = document.createElement('h2');
     header.textContent = `[${entry.timestamp || '???'}] ${entry.title || 'Untitled'}`;
+    header.classList.add(randomGlitch());
     container.appendChild(header);
 
     const body = document.createElement('p');
     body.innerHTML = (entry.full || '[No content]').replace(/\n/g, '<br>');
     container.appendChild(body);
 
-    return container; // ✅ Return it — don’t append here
+    return container;
   }
 
   // 🧱 Default entry rendering
@@ -27,6 +32,7 @@ export function renderLoreEntry(entry) {
 
   const title = document.createElement('h2');
   title.textContent = entry.title || 'Untitled Entry';
+  title.classList.add(randomGlitch()); // 💫 Apply glitch class
   container.appendChild(title);
 
   if (entry.published) {
@@ -47,7 +53,7 @@ export function renderLoreEntry(entry) {
     container.appendChild(tags);
   }
 
-  return container; // ✅ Again, return — don’t append
+  return container;
 }
 
 // 🔧 Helper: formats ISO date strings
