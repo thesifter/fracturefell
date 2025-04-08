@@ -2,53 +2,67 @@
 // Handles fullscreen modal for lore image entries (v2 MacGuffin-Proof)
 
 export function initLoreImageModal() {
+  // Create the modal element dynamically
   const modal = document.createElement('div');
-  modal.id = 'loreModal';
-  modal.className = 'lore-modal hidden';
+  modal.id = 'loreModal'; // Assign an ID for the modal
+  modal.className = 'lore-modal hidden'; // Initially hide the modal using the 'hidden' class
 
+  // Add the modal content structure to the modal element
   modal.innerHTML = `
     <div class="lore-modal-content">
-      <img id="modalImage" src="" alt="Lore image">
-      <p id="modalCaption" class="lore-caption"></p>
+      <img id="modalImage" src="" alt="Lore image"> <!-- Placeholder for the full-size image -->
+      <p id="modalCaption" class="lore-caption"></p> <!-- Placeholder for the image caption -->
     </div>
-    <div class="lore-modal-close" id="closeModal" title="Close">✕</div>
+    <div class="lore-modal-close" id="closeModal" title="Close">✕</div> <!-- Close button -->
   `;
 
+  // Append the modal to the document body
   document.body.appendChild(modal);
 
-  // Image click handler
+  // Image click handler for thumbnails
   document.addEventListener('click', e => {
-    if (e.target.classList.contains('lore-image')) {
-      const modalImg = document.getElementById('modalImage');
-      const caption = document.getElementById('modalCaption');
+    // Check if the clicked element is a thumbnail (lore-image-thumb)
+    if (e.target.classList.contains('lore-image-thumb')) {
+      const modalImg = document.getElementById('modalImage'); // Get the modal image element
+      const caption = document.getElementById('modalCaption'); // Get the caption element in the modal
 
-      // Preload image to avoid flash of broken img
-      const preload = new Image();
+      // Preload the full-size image to avoid flash of unstyled or broken images
+      const preload = new Image();  // Create a new Image object for preloading
       preload.onload = () => {
+        // Once the image is successfully loaded, set the source of the modal image
         modalImg.src = preload.src;
-        caption.textContent =
-          e.target.closest('.lore-entry')?.querySelector('.lore-caption')?.textContent || '';
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // lock scroll
-      };
 
-      preload.onerror = () => {
-        console.warn(`[LoreModal] Failed to load image: ${e.target.src}`);
-        modalImg.src = ''; // clear previous src
-        caption.textContent = '⚠️ Image not available.';
+        // Set the caption to the one associated with the lore entry, if available
+        caption.textContent =
+          e.target.closest('.lore-entry')?.querySelector('.lore-caption')?.textContent || ''; // Default to empty if no caption
+
+        // Show the modal by removing the 'hidden' class
         modal.classList.remove('hidden');
+
+        // Lock the scroll of the body so that the user cannot scroll while the modal is open
         document.body.style.overflow = 'hidden';
       };
 
-      preload.src = e.target.src;
+      // Error handling in case the image fails to load
+      preload.onerror = () => {
+        console.warn(`[LoreModal] Failed to load image: ${e.target.src}`); // Log the error in the console
+        modalImg.src = ''; // Clear the previous image source if there was an error
+        caption.textContent = '⚠️ Image not available.'; // Display a fallback message in the caption
+        modal.classList.remove('hidden'); // Show the modal even with an error
+        document.body.style.overflow = 'hidden'; // Lock the scroll even if there's an error
+      };
+
+      // Set the source of the preload image to the source of the clicked thumbnail
+      preload.src = e.target.src;  // Set the image source for the preloaded image
     }
   });
 
-  // Close modal
+  // Close modal when clicking the close button or outside the modal content
   document.addEventListener('click', e => {
+    // Check if the clicked element is the close button or the overlay (background of the modal)
     if (e.target.id === 'closeModal' || e.target.id === 'loreModal') {
-      document.getElementById('loreModal').classList.add('hidden');
-      document.body.style.overflow = ''; // restore scroll
+      document.getElementById('loreModal').classList.add('hidden'); // Hide the modal by adding the 'hidden' class
+      document.body.style.overflow = ''; // Restore the scroll behavior of the page
     }
   });
 }
