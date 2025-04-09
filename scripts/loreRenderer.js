@@ -40,27 +40,27 @@ export function renderLoreEntry(entry) {
     }
 
     case 'image': {
-      const img = document.createElement('img');
-      img.src = entry.image || `./images/${entry.slug}.jpg`;
-      img.alt = entry.title || 'Lore image';
-      img.classList.add('lore-image');
-      img.style.cursor = 'zoom-in';
-
+      // Thumbnail for the list view
       const thumb = document.createElement('img');
       thumb.classList.add('lore-image-thumb');
       thumb.src = entry.image || `./images/${entry.slug}.jpg`;
       thumb.alt = entry.title || 'Lore image thumb';
       container.appendChild(thumb);
 
-      img.onload = () => {
-        container.appendChild(img);
+      // Click event for opening the full-size image in the modal
+      thumb.addEventListener('click', () => {
+        // Open the modal with the full-size image
+        openImageModal(entry.image || `./images/${entry.slug}.jpg`, entry.content);
+      });
 
-        if (entry.content) {
-          const caption = document.createElement('p');
-          caption.classList.add('lore-caption');
-          caption.textContent = entry.content;
-          container.appendChild(caption);
-        }
+      // Don't add full-size image to the list view
+      const img = document.createElement('img');
+      img.classList.add('lore-image');
+      img.src = entry.image || `./images/${entry.slug}.jpg`;
+      img.alt = entry.title || 'Lore image';
+
+      img.onload = () => {
+        // The full-size image will only be added to the modal when clicked, not in the list
       };
 
       img.onerror = () => {
@@ -90,7 +90,7 @@ export function renderLoreEntry(entry) {
   return container;
 }
 
-// Helper: format published date
+// Helper function to format published date
 function formatDate(iso) {
   try {
     return new Date(iso).toLocaleDateString(undefined, {
@@ -101,4 +101,23 @@ function formatDate(iso) {
   } catch {
     return '[invalid date]';
   }
+}
+
+// Function to open the modal with the full-size image and caption
+function openImageModal(imageSrc, captionText) {
+  const modal = document.getElementById('loreModal');
+  const modalImg = document.getElementById('modalImage');
+  const caption = document.getElementById('modalCaption');
+
+  // Set the modal image source
+  modalImg.src = imageSrc;
+
+  // Set the caption
+  caption.textContent = captionText || '[No caption]';
+
+  // Show the modal by removing the 'hidden' class
+  modal.classList.remove('hidden');
+
+  // Lock the page scrolling
+  document.body.style.overflow = 'hidden';
 }
