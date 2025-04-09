@@ -78,4 +78,19 @@ body {
   display: none;  /* Initially, image is hidden */
   visibility: hidden; /* To ensure it's not visible before loading */
 }
+/* Thumb styles for the lore images */
+.lore-image-thumb {
+  width: 160px;  /* Set the size for the thumbnail */
+  height: auto;
+  border-radius: 5px;
+  image-rendering: pixelated;  /* Keeps the image pixelated (optional) */
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);  /* Soft shadow for the thumbnail */
+  cursor: pointer;  /* Changes the cursor to pointer to indicate it's clickable */
+  transition: transform 0.3s ease;  /* Smooth hover effect */
+}
+
+.lore-image-thumb:hover {
+  transform: scale(1.05);  /* Slight zoom effect on hover */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);  /* Highlight with shadow on hover */
+}
 
