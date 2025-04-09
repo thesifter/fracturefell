@@ -10,7 +10,7 @@ export function initLoreImageModal() {
   // Add the modal content structure to the modal element
   modal.innerHTML = `
     <div class="lore-modal-content">
-      <img id="modalImage" src="" alt="Lore image"> <!-- Placeholder for the full-size image -->
+      <img id="modalImage" src="" alt="Lore image" style="display: none;"> <!-- Image initially hidden -->
       <p id="modalCaption" class="lore-caption"></p> <!-- Placeholder for the image caption -->
     </div>
     <div class="lore-modal-close" id="closeModal" title="Close">✕</div> <!-- Close button -->
@@ -36,6 +36,9 @@ export function initLoreImageModal() {
         caption.textContent =
           e.target.closest('.lore-entry')?.querySelector('.lore-caption')?.textContent || ''; // Default to empty if no caption
 
+        // Make the modal image visible once it is loaded successfully
+        modalImg.style.display = 'block';  // Change display to 'block' to make it visible
+
         // Show the modal by removing the 'hidden' class
         modal.classList.remove('hidden');
 
@@ -48,6 +51,7 @@ export function initLoreImageModal() {
         console.warn(`[LoreModal] Failed to load image: ${e.target.src}`); // Log the error in the console
         modalImg.src = ''; // Clear the previous image source if there was an error
         caption.textContent = '⚠️ Image not available.'; // Display a fallback message in the caption
+        modalImg.style.display = 'none'; // Ensure the modal image remains hidden if it failed to load
         modal.classList.remove('hidden'); // Show the modal even with an error
         document.body.style.overflow = 'hidden'; // Lock the scroll even if there's an error
       };
