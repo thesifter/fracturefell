@@ -59,3 +59,8 @@ body {
   height: auto;    /* Maintain aspect ratio of the image */
   margin: 1
 }
+/* Ensure the modal image is hidden initially when there’s no valid source -- bug*/
+.lore-modal img {
+  visibility: hidden;  /* Keeps the image in the document, but makes it invisible */
+  display: none; 
+}
