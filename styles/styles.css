@@ -52,15 +52,30 @@ body {
 
 /* === Image Entry Specific Styles === */
 
-/* Full-size image styling: hidden by default */
-.lore-image {
-  display: none;   /* Hide full-size image initially */
-  width: 100%;     /* Ensure the image takes the full width */
-  height: auto;    /* Maintain aspect ratio of the image */
-  margin: 1
+/* This hides the modal by default (before it is triggered) */
+.lore-modal.hidden {
+  display: none;  /* Hides the modal completely */
 }
-/* Ensure the modal image is hidden initially when there’s no valid source -- bug*/
+
+/* This ensures the modal is displayed when it is not hidden */
+.lore-modal {
+  display: flex; /* Ensures the modal shows when needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* You may also want to apply styles to the modal image */
 .lore-modal img {
-  visibility: hidden;  /* Keeps the image in the document, but makes it invisible */
-  display: none; 
+  display: none;  /* Initially, image is hidden */
+  visibility: hidden; /* To ensure it's not visible before loading */
 }
+
