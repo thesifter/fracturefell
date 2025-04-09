@@ -65,7 +65,7 @@ export function initLoreImageModal() {
   document.addEventListener('click', e => {
     // Check if the clicked element is the close button or the overlay (background of the modal)
     if (e.target.id === 'closeModal' || e.target.id === 'loreModal') {
-      document.getElementById('loreModal').classList.add('hidden'); // Hide the modal by adding the 'hidden' class
+      document.getElementById('loreModal').classList.add('hidden'); // Hide the modal by adding 'hidden' class
       document.body.style.overflow = ''; // Restore the scroll behavior of the page
     }
   });
