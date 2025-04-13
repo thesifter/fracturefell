@@ -2,7 +2,7 @@
 // Handles rendering lore entries into the DOM (v2.1)
 // Supports: journal, shortform, image + longform class handling
 
-import { openImageModal } from './loreImageModal.js'; // Import the modal logic specifically for image entries
+import { loreImageModal } from './loreImageModal.js'; // Import the modal logic specifically for image entries
 
 export function renderLoreEntry(entry) {
   const glitchVariants = ['glitch-1', 'glitch-2', 'glitch-3', 'glitch-4', 'glitch-5'];
@@ -52,7 +52,7 @@ export function renderLoreEntry(entry) {
       // Click event for opening the full-size image in the modal
       thumb.addEventListener('click', () => {
         // Open the modal with the full-size image
-        openImageModal(entry.image || `./images/${entry.slug}.jpg`, entry.content);
+        loreImageModal(entry.image || `./images/${entry.slug}.jpg`, entry.content);
       });
 
       // Don't add full-size image to the list view
