@@ -25,6 +25,3 @@ initLoreImageModal(); // Initialize the image modal
 document.addEventListener('DOMContentLoaded', () => {
   initDevMode(); // This was previously in devMode.js, now moved here
 });
-
-// Fetch and Render Lore Entries (now in loreRenderer.js)
-fetchAndRenderLoreEntries(); // Calls the function from loreRenderer.js to fetch and render lore
