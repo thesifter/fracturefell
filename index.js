@@ -1,12 +1,11 @@
 // index.js
-import { releaseZergling } from './scripts/zerglings.js'; // Import Zergling release logic (named export)
-import { initScareZone } from './scripts/gifscare.js'; // Import Scare Zone initialization (named export)
-import { initGlitchEffect } from './scripts/glitch.js'; // Import Glitch effect logic (named export)
-import { initLoreImageModal } from './scripts/loreImageModal.js'; // Import Lore Image Modal (named export)
-import { initDevMode } from './scripts/devMode.js'; // Import Dev Mode setup (named export)
-import { fetchAndRenderLoreEntries } from './scripts/loreRenderer.js'; // Import lore rendering (named export)
-import './scripts/verbTrigger.js'; // Import the verb trigger logic (no export, just side-effect)
-
+import './scripts/verbTrigger.js'; // Import the verb trigger logic
+import { fetchAndRenderLoreEntries } from './scripts/loreRenderer.js'; // Import the function that fetches and renders lore entries
+import { releaseZergling } from './scripts/zerglings.js'; // Import Zergling release logic
+import { initScareZone } from './scripts/gifscare.js'; // Import Scare Zone initialization
+import { initGlitchEffect } from './scripts/glitch.js'; // Import Glitch effect logic
+import { initLoreImageModal } from './scripts/loreImageModal.js'; // Import Lore Image Modal
+import { initDevMode } from './scripts/devMode.js'; // Import Dev Mode setup
 
 // Initialize Zergling
 releaseZergling(); // Fires once when dev loads
@@ -27,5 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDevMode(); // This was previously in devMode.js, now moved here
 });
 
-// Fetch and Render Lore Entries (moved to loreRenderer.js)
-fetchAndRenderLoreEntries(); // Now handled by loreRenderer.js
+// Fetch and Render Lore Entries (now in loreRenderer.js)
+fetchAndRenderLoreEntries(); // Calls the function from loreRenderer.js to fetch and render lore
