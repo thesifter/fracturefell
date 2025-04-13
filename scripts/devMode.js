@@ -3,8 +3,7 @@ import { getFeatureFlags } from './featureFlag.js';
 import { renderLoreEntry } from './loreRenderer.js';
 
 export function initDevMode() {
-  const flags = getFeatureFlags();
-  if (!flags.dev) return;  // Only run dev-mode code if the flag is present
+  // Removed feature flag check so this code runs regardless of the flag
 
   // Logging for debugging purposes
   fetch('./data/lore.json?v=' + Date.now())
