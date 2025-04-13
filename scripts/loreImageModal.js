@@ -1,7 +1,7 @@
 // scripts/loreImageModal.js
 // Handles fullscreen modal for lore image entries (v2 MacGuffin-Proof)
 
-export function initLoreImageModal() {
+export function loreImageModal() {
   // Create the modal element dynamically
   const modal = document.createElement('div');
   modal.id = 'loreModal'; // Assign an ID for the modal
