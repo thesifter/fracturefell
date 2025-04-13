@@ -2,6 +2,8 @@
 // Handles rendering lore entries into the DOM (v2.1)
 // Supports: journal, shortform, image + longform class handling
 
+import { openImageModal } from './loreImageModal.js'; // Import the modal logic specifically for image entries
+
 export function renderLoreEntry(entry) {
   const glitchVariants = ['glitch-1', 'glitch-2', 'glitch-3', 'glitch-4', 'glitch-5'];
   const randomGlitch = () => glitchVariants[Math.floor(Math.random() * glitchVariants.length)];
@@ -101,23 +103,4 @@ function formatDate(iso) {
   } catch {
     return '[invalid date]';
   }
-}
-
-// Function to open the modal with the full-size image and caption
-function openImageModal(imageSrc, captionText) {
-  const modal = document.getElementById('loreModal');
-  const modalImg = document.getElementById('modalImage');
-  const caption = document.getElementById('modalCaption');
-
-  // Set the modal image source
-  modalImg.src = imageSrc;
-
-  // Set the caption
-  caption.textContent = captionText || '[No caption]';
-
-  // Show the modal by removing the 'hidden' class
-  modal.classList.remove('hidden');
-
-  // Lock the page scrolling
-  document.body.style.overflow = 'hidden';
 }
