@@ -5,6 +5,11 @@
 import { loreImageModal } from './loreImageModal.js'; // Import the modal logic specifically for image entries
 
 export function renderLoreEntry(entry) {
+  if (!entry) {
+    console.warn('[loreRenderer] Invalid lore entry:', entry);
+    return;  // Early return if the entry is undefined or null
+  }
+
   const glitchVariants = ['glitch-1', 'glitch-2', 'glitch-3', 'glitch-4', 'glitch-5'];
   const randomGlitch = () => glitchVariants[Math.floor(Math.random() * glitchVariants.length)];
 
