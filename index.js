@@ -4,7 +4,7 @@ import { renderLoreEntry } from './scripts/loreRenderer.js'; // Import the funct
 import { releaseZergling } from './scripts/zerglings.js'; // Import Zergling release logic
 import { initScareZone } from './scripts/gifscare.js'; // Import Scare Zone initialization
 import { initGlitchEffect } from './scripts/glitch.js'; // Import Glitch effect logic
-import { initLoreImageModal } from './scripts/loreImageModal.js'; // Import Lore Image Modal
+import { loreImageModal } from './scripts/loreImageModal.js'; // Import Lore Image Modal
 import { initDevMode } from './scripts/devMode.js'; // Import Dev Mode setup
 
 // Initialize Zergling
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Initialize Lore Image Modal
-initLoreImageModal(); // Initialize the image modal
+loreImageModal(); // Initialize the image modal
 
 // Initialize Dev Mode
 document.addEventListener('DOMContentLoaded', () => {
