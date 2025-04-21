@@ -8,8 +8,10 @@ import { loreImageModal } from './scripts/loreImageModal.js'; // Import Lore Ima
 import { initDevMode } from './scripts/devMode.js'; // Import Dev Mode setup
 
 // Initialize Zergling
-releaseZergling(); // Fires once when dev loads
+releaseZergling(); 
 
+//lore entir4es
+renderLoreEntry();
 // Initialize Scare Zone
 initScareZone(); // Initialize the scare zone
 
