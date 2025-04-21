@@ -1,6 +1,6 @@
 // index.js
 import './scripts/verbTrigger.js'; // Import the verb trigger logic
-import { fetchAndRenderLoreEntries } from './scripts/loreRenderer.js'; // Import the function that fetches and renders lore entries
+import { renderLoreEntry } from './scripts/loreRenderer.js'; // Import the function that fetches and renders lore entries
 import { releaseZergling } from './scripts/zerglings.js'; // Import Zergling release logic
 import { initScareZone } from './scripts/gifscare.js'; // Import Scare Zone initialization
 import { initGlitchEffect } from './scripts/glitch.js'; // Import Glitch effect logic
