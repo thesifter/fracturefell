@@ -93,4 +93,17 @@ body {
   transform: scale(1.05);  /* Slight zoom effect on hover */
   box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);  /* Highlight with shadow on hover */
 }
+#verb-trigger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  font-family: monospace;
+  cursor: pointer;
+  background: #222;
+  color: #e2e2e2;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
 
