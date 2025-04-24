@@ -1,54 +1,63 @@
 // scripts/verbTrigger.js
+// Handles dynamic verb rotation + dev-triggered flash sequences
 
-const DEV_MODE = window.location.search.includes('ritual=dev');
-const verbTrigger = document.getElementById('verbTrigger');
+document.addEventListener('DOMContentLoaded', () => {
+  const DEV_MODE = window.location.search.includes('ritual=dev');
+  const verbTrigger = document.getElementById('verbTrigger');
 
-let verbs = [];
-let currentIndex = 0;
+  if (!verbTrigger) {
+    if (DEV_MODE) console.warn('[verbTrigger] #verbTrigger not found in DOM.');
+    return;
+  }
 
-if (verbTrigger) {
+  let verbs = [];
+  let currentIndex = 0;
+
+  // Fetch verbs and start rotation
   fetch('./data/verbs.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
       verbs = shuffleArray(data);
-      rotateVerb();
-      setInterval(rotateVerb, 4000); // Rotate every 4 seconds
+      rotateVerb(); // Initial render
+      setInterval(rotateVerb, 4000); // Update every 4 seconds
     })
     .catch(err => {
       console.error('[verbTrigger] Failed to load verbs.json', err);
     });
 
+  // Click behavior
   verbTrigger.addEventListener('click', () => {
     if (DEV_MODE) console.log('[verbTrigger] Clicked!');
     import('./flashSequence.js')
       .then(mod => {
         if (DEV_MODE) console.log('[verbTrigger] Launching flash sequence.');
         mod.initFlashSequence();
+      })
+      .catch(err => {
+        console.error('[verbTrigger] Failed to load flashSequence.js', err);
       });
   });
-}
 
-function rotateVerb() {
-  if (!verbs.length) return;
+  // Swap the verb content
+  function rotateVerb() {
+    if (!verbs.length) return;
 
-  const { text, charged, type } = verbs[currentIndex];
-  verbTrigger.textContent = text;
-  verbTrigger.dataset.type = type;
-  verbTrigger.dataset.charged = charged;
+    const { text, charged, type } = verbs[currentIndex];
+    verbTrigger.textContent = text;
+    verbTrigger.dataset.type = type;
+    verbTrigger.dataset.charged = charged;
 
-  // Apply visual flair to charged verbs
-  if (charged) {
-    verbTrigger.classList.add('charged');
-  } else {
-    verbTrigger.classList.remove('charged');
+    // Visual styling
+    verbTrigger.classList.toggle('charged', charged);
+
+    currentIndex = (currentIndex + 1) % verbs.length;
   }
 
-  currentIndex = (currentIndex + 1) % verbs.length;
-}
-
-function shuffleArray(array) {
-  return array
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
-}
+  // Utility: Fisher-Yates shuffle
+  function shuffleArray(array) {
+    return array
+      .map(value => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value);
+  }
+});
