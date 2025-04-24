@@ -1,35 +1,53 @@
 // scripts/loreRenderer.js
-// Handles rendering lore entries into the DOM (v2.1)
-// Supports: journal, shortform, image + longform class handling
+// Handles fetching and rendering lore entries into the DOM (v2.1)
+// Fully encapsulated, no exports
 
-import { loreImageModal } from './loreImageModal.js'; // Import the modal logic specifically for image entries
+import { loreImageModal } from './loreImageModal.js';
 
-export function renderLoreEntry(entry) {
-  if (!entry) {
-    console.warn('[loreRenderer] Invalid lore entry:', entry);
-    return;  // Early return if the entry is undefined or null
-  }
+function fetchAndRenderLoreEntries() {
+  fetch('./data/lore.json?v=' + Date.now())
+    .then(res => res.json())
+    .then(lore => {
+      if (!Array.isArray(lore)) {
+        console.error('Invalid lore data: Expected an array', lore);
+        return;
+      }
+
+      const container = document.createElement('div');
+      container.id = 'lore-container';
+      document.body.appendChild(container);
+
+      lore.forEach(entry => {
+        if (!entry) {
+          console.warn('Skipping invalid lore entry:', entry);
+          return;
+        }
+        const loreElement = renderLoreEntry(entry);
+        if (loreElement) container.appendChild(loreElement);
+      });
+    })
+    .catch(err => {
+      console.error('[lore] Failed to load lore.json for render:', err);
+    });
+}
+
+function renderLoreEntry(entry) {
+  if (!entry) return null;
 
   const glitchVariants = ['glitch-1', 'glitch-2', 'glitch-3', 'glitch-4', 'glitch-5'];
   const randomGlitch = () => glitchVariants[Math.floor(Math.random() * glitchVariants.length)];
 
   const container = document.createElement('div');
   container.classList.add('lore-entry');
-
-  // Add type-based class
   if (entry.type) container.classList.add(`lore-${entry.type}`);
-  // Add longform modifier if applicable
   if (entry.longform) container.classList.add('lore-longform');
-  // Add ID from slug for routing
   if (entry.slug) container.id = `lore-${entry.slug}`;
 
-  // Title (all types)
   const title = document.createElement('h2');
   title.textContent = entry.title || 'Untitled Entry';
   title.classList.add(randomGlitch());
   container.appendChild(title);
 
-  // Published date
   if (entry.published) {
     const published = document.createElement('div');
     published.classList.add('lore-date');
@@ -37,56 +55,32 @@ export function renderLoreEntry(entry) {
     container.appendChild(published);
   }
 
-  // Type-specific rendering
   switch (entry.type) {
-    case 'shortform': {
-      const body = document.createElement('p');
-      body.innerHTML = (entry.full || '[No content]').replace(/\n/g, '<br>');
-      container.appendChild(body);
+    case 'shortform':
+      const shortBody = document.createElement('p');
+      shortBody.innerHTML = (entry.full || '[No content]').replace(/\n/g, '<br>');
+      container.appendChild(shortBody);
       break;
-    }
 
-    case 'image': {
-      // Thumbnail for the list view
+    case 'image':
       const thumb = document.createElement('img');
       thumb.classList.add('lore-image-thumb');
       thumb.src = entry.image || `./images/${entry.slug}.jpg`;
       thumb.alt = entry.title || 'Lore image thumb';
-      container.appendChild(thumb);
-
-      // Click event for opening the full-size image in the modal
       thumb.addEventListener('click', () => {
-        // Open the modal with the full-size image
         loreImageModal(entry.image || `./images/${entry.slug}.jpg`, entry.content);
       });
-
-      // Don't add full-size image to the list view
-      const img = document.createElement('img');
-      img.classList.add('lore-image');
-      img.src = entry.image || `./images/${entry.slug}.jpg`;
-      img.alt = entry.title || 'Lore image';
-
-      img.onload = () => {
-        // The full-size image will only be added to the modal when clicked, not in the list
-      };
-
-      img.onerror = () => {
-        console.warn(`[loreRenderer] Image not found for entry: ${entry.slug}`);
-      };
-
+      container.appendChild(thumb);
       break;
-    }
 
     case 'journal':
-    default: {
+    default:
       const content = document.createElement('p');
       content.textContent = entry.content || '[No content provided]';
       container.appendChild(content);
       break;
-    }
   }
 
-  // Tags
   if (entry.tags && Array.isArray(entry.tags)) {
     const tags = document.createElement('div');
     tags.classList.add('lore-tags');
@@ -97,15 +91,19 @@ export function renderLoreEntry(entry) {
   return container;
 }
 
-// Helper function to format published date
 function formatDate(iso) {
   try {
     return new Date(iso).toLocaleDateString(undefined, {
       year: 'numeric',
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
     });
   } catch {
     return '[invalid date]';
   }
 }
+
+// Auto-initialize on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  fetchAndRenderLoreEntries();
+});
