@@ -3,7 +3,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const DEV_MODE = window.location.search.includes('ritual=dev');
-  const verbTrigger = document.getElementById('verbTrigger');
+  const verbTrigger = document.getElementById('verb-trigger');
 
   if (!verbTrigger) {
     if (DEV_MODE) console.warn('[verbTrigger] #verbTrigger not found in DOM.');
