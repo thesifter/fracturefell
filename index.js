@@ -1,29 +1,21 @@
 // index.js
-import './scripts/verbTrigger.js'; // Import the verb trigger logic
-import { renderLoreEntry } from './scripts/loreRenderer.js'; // Import the function that fetches and renders lore entries
-import { releaseZergling } from './scripts/zerglings.js'; // Import Zergling release logic
-import { initScareZone } from './scripts/gifscare.js'; // Import Scare Zone initialization
-import { initGlitchEffect } from './scripts/glitch.js'; // Import Glitch effect logic
-import { loreImageModal } from './scripts/loreImageModal.js'; // Import Lore Image Modal
-import { initDevMode } from './scripts/devMode.js'; // Import Dev Mode setup
+// Main entrypoint for FractureFile frontend behaviors
 
-// Initialize Zergling
-releaseZergling(); 
+import './scripts/loreRenderer.js'; // Self-inits on load
+import { releaseZergling } from './scripts/zerglings.js'; // Active behavior, runs now
+import { initScareZone } from './scripts/gifscare.js'; // Needs explicit init
+import { initGlitchEffect } from './scripts/glitch.js'; // Needs DOM to be ready
+import { initDevMode } from './scripts/devMode.js'; // Dev-only, post-load
+import './scripts/verbTrigger.js'; // Assumed passive behavior
 
-//lore entir4es
-renderLoreEntry();
-// Initialize Scare Zone
-initScareZone(); // Initialize the scare zone
+// Init Zergling immediately (side-effect module)
+releaseZergling();
 
-// Initialize Glitch Effect
+// Init Scare Zone
+initScareZone();
+
+// DOM-dependent inits
 document.addEventListener('DOMContentLoaded', () => {
-  initGlitchEffect(); // Initializes glitch effect after DOM content is loaded
-});
-
-// Initialize Lore Image Modal
-loreImageModal(); // Initialize the image modal
-
-// Initialize Dev Mode
-document.addEventListener('DOMContentLoaded', () => {
-  initDevMode(); // This was previously in devMode.js, now moved here
+  initGlitchEffect();
+  initDevMode();
 });
