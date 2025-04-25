@@ -38,6 +38,8 @@ export function loreImageModal() {
 
         // Make the modal image visible once it is loaded successfully
         modalImg.style.display = 'block';  // Change display to 'block' to make it visible
+        modalImg.style.visibility = 'visible';  // Change visibility to 'visible' to make it visible
+        
 
         // Show the modal by removing the 'hidden' class
         modal.classList.remove('hidden');
