@@ -39,7 +39,6 @@ export function loreImageModal() {
         // Make the modal image visible once it is loaded successfully
         modalImg.style.display = 'block';  // Change display to 'block' to make it visible
         modalImg.style.visibility = 'visible';  // Change visibility to 'visible' to make it visible
-        
 
         // Show the modal by removing the 'hidden' class
         modal.classList.remove('hidden');
@@ -66,9 +65,17 @@ export function loreImageModal() {
   // Close modal when clicking the close button or outside the modal content
   document.addEventListener('click', e => {
     // Check if the clicked element is the close button or the overlay (background of the modal)
-    if (e.target.id === 'closeModal' || e.target.id === 'loreModal') {
+    if (e.target.id === 'closeModal' || e.target.id === 'loreModal' || e.target.id === 'modalImage') {
       document.getElementById('loreModal').classList.add('hidden'); // Hide the modal by adding 'hidden' class
       document.body.style.overflow = ''; // Restore the scroll behavior of the page
+    }
+  });
+
+  // Close modal on pressing Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.getElementById('loreModal').classList.add('hidden');
+      document.body.style.overflow = ''; // Restore scroll behavior
     }
   });
 }
