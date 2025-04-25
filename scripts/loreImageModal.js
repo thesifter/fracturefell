@@ -45,6 +45,7 @@ export function loreImageModal(imageSrc, captionText) {
   // Make sure the image is visible when the modal is shown
   modal.classList.remove('hidden');
   modalImg.style.display = 'block'; // Ensure the image is visible
+  modalImg.style.visibility = 'visible'; // Ensure the image is visible
 
   // Lock the body scroll when the modal is open
   document.body.style.overflow = 'hidden';
