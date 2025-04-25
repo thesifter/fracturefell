@@ -1,52 +1,35 @@
 // scripts/loreImageModal.js
-// Handles fullscreen modal for lore image entries (v2 MacGuffin-Proof)
+// Handles fullscreen modal for lore image entries
 
 export function loreImageModal(imageSrc, captionText) {
-  // Create modal div
-  const modal = document.createElement('div');
-  modal.id = 'loreModal';
-  modal.className = 'lore-modal hidden'; // Initially hide the modal
+  const modal = document.getElementById('loreModal');
+  const modalImg = document.getElementById('modalImage');
+  const caption = document.getElementById('modalCaption');
 
-  // Create modal content wrapper
-  const modalContent = document.createElement('div');
-  modalContent.className = 'lore-modal-content';
-
-  // Create image element
-  const modalImg = document.createElement('img');
-  modalImg.id = 'modalImage';
+  // Set the modal image source
   modalImg.src = imageSrc;
-  modalImg.alt = 'Lore image';
-
-  // Create caption for the image
-  const caption = document.createElement('p');
-  caption.id = 'modalCaption';
-  caption.classList.add('lore-caption');
+  // Set the caption text
   caption.textContent = captionText || '[No caption]';
 
-  // Append image and caption to modal content
-  modalContent.appendChild(modalImg);
-  modalContent.appendChild(caption);
+  // Ensure modal is visible
+  modal.classList.remove('hidden');
+  modal.style.visibility = 'visible';  // Make sure the modal is visible
 
-  // Append modal content to modal
-  modal.appendChild(modalContent);
+  // Lock the page scrolling when modal is open
+  document.body.style.overflow = 'hidden';
 
-  // Append modal to body
-  document.body.appendChild(modal);
-
-  // Click event for modal (to close it)
-  document.addEventListener('click', e => {
-    // If you click on the background (loreModal) or the close button, close the modal
-    if (e.target.id === 'loreModal') {
-      document.getElementById('loreModal').classList.add('hidden'); // Hide modal
-      document.body.style.overflow = ''; // Restore body scroll
+  // Close the modal when clicking the modal background
+  modal.addEventListener('click', (e) => {
+    // If the click is on the modal background (not the image), close the modal
+    if (e.target === modal) {
+      modal.classList.add('hidden'); // Hide modal when clicking the background
+      document.body.style.overflow = ''; // Restore page scroll
     }
   });
 
-  // Make sure the image is visible when the modal is shown
-  modal.classList.remove('hidden');
-  modalImg.style.display = 'block'; // Ensure the image is visible
-  modalImg.style.visibility = 'visible'; // Ensure the image is visible
-
-  // Lock the body scroll when the modal is open
-  document.body.style.overflow = 'hidden';
+  // Optional: Close the modal when clicking on the image itself as a button (additional usability)
+  modalImg.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = ''; // Restore page scroll
+  });
 }
