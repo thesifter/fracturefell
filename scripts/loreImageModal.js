@@ -1,35 +1,33 @@
-// scripts/loreImageModal.js
-// Handles fullscreen modal for lore image entries
-
-export function loreImageModal(imageSrc, captionText) {
+// Function to open the modal with the full-size image and caption
+function openImageModal(imageSrc, captionText) {
   const modal = document.getElementById('loreModal');
   const modalImg = document.getElementById('modalImage');
   const caption = document.getElementById('modalCaption');
 
-  // Set the modal image source
-  modalImg.src = imageSrc;
-  // Set the caption text
+  // Start by hiding the image
+  modalImg.style.display = 'none'; // Hide image while it's loading
+
+  // Set the caption
   caption.textContent = captionText || '[No caption]';
 
-  // Ensure modal is visible
+  // Show the modal by removing the 'hidden' class
   modal.classList.remove('hidden');
-  modal.style.visibility = 'visible';  // Make sure the modal is visible
 
-  // Lock the page scrolling when modal is open
+  // Lock the page scrolling
   document.body.style.overflow = 'hidden';
 
-  // Close the modal when clicking the modal background
-  modal.addEventListener('click', (e) => {
-    // If the click is on the modal background (not the image), close the modal
-    if (e.target === modal) {
-      modal.classList.add('hidden'); // Hide modal when clicking the background
-      document.body.style.overflow = ''; // Restore page scroll
-    }
-  });
+  // Preload the image and display it once it's ready
+  const preload = new Image();
+  
+  preload.onload = () => {
+    modalImg.src = preload.src; // Set the image source to the fully loaded image
+    modalImg.style.display = 'block'; // Show the image once it's loaded
+  };
 
-  // Optional: Close the modal when clicking on the image itself as a button (additional usability)
-  modalImg.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    document.body.style.overflow = ''; // Restore page scroll
-  });
+  preload.onerror = () => {
+    caption.textContent = '⚠️ Image not available.'; // Show error message in the modal
+    modalImg.style.display = 'none'; // Hide image if there's an error
+  };
+
+  preload.src = imageSrc;  // Start loading the image
 }
