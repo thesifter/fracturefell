@@ -192,5 +192,4 @@ body {
   max-height: 150px;  /* Limit height to 150px */
   object-fit: cover;  /* Ensure the image is cropped to fit the box without distortion */
   display: block;     /* Ensures the image behaves as a block element */
-  margin: 0 auto;     /* Centers the image */
-}
+  margin: 0 ;
