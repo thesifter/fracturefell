@@ -1,61 +1,101 @@
 [
   {
-    "id": "void-entry",
-    "slug": "the-void-blinks",
-    "title": "The Void Blinks",
+    "id": "void-entry-1",
+    "slug": "the-void-awakens",
+    "title": "The Void Awakens",
     "type": "journal",
-    "content": "We stared too long. It stared back. We forgot what we were.",
-    "tags": ["void", "loop", "mirror"],
-    "published": "2025-04-07",
-    "longform": true,
+    "content": "The darkness stirred. A whisper crossed the threshold. We weren’t alone anymore.",
+    "tags": ["void", "awakening", "threshold"],
+    "published": "2025-04-01",
     "trigger": "flash.ritual"
   },
   {
-    "id": "zergling-track",
-    "slug": "zergling-was-here",
-    "title": "Zergling Was Here",
+    "id": "zergling-entry-1",
+    "slug": "zergling-sightings",
+    "title": "Zergling Sightings",
     "type": "shortform",
-    "full": "scratch marks. everywhere.\nno eyes. just teeth.",
-    "tags": ["scratch", "crawl"],
-    "published": "2025-04-07",
+    "content": "Small claws scuttling in the dark. No sound. Just shadows.",
+    "tags": ["zergling", "scurry", "shadows"],
+    "published": "2025-04-02",
     "trigger": "spawn.zerg"
   },
   {
-    "id": "vision-ff1",
-    "slug": "flash-memory-ff1",
-    "title": "Flash Memory Fragment 1",
+    "id": "vision-ff3",
+    "slug": "flash-memory-ff3",
+    "title": "Flash Memory Fragment 3",
     "type": "image",
-    "content": "This was the moment it stepped through.",
-    "tags": ["threshold", "arrival"],
-    "published": "2025-04-07",
-    "image": "./images/ff1.png"
+    "content": "A figure looms in the haze, like an echo of something once known.",
+    "tags": ["vision", "haze", "memory"],
+    "published": "2025-04-03",
+    "image": "./images/ff3.png"
   },
   {
-    "id": "vision-ff2",
-    "slug": "flash-memory-ff2",
-    "title": "Flash Memory Fragment 2",
+    "id": "vision-ff4",
+    "slug": "flash-memory-ff4",
+    "title": "Flash Memory Fragment 4",
     "type": "image",
-    "content": "You were there. You just don’t remember.",
-    "tags": ["memory", "denial"],
-    "published": "2025-04-07",
-    "image": "./images/ff2.png"
+    "content": "The door cracked open, but the light on the other side was darker.",
+    "tags": ["threshold", "door", "darkness"],
+    "published": "2025-04-04",
+    "image": "./images/ff4.png"
   },
   {
-    "id": "sealed-entry",
-    "slug": "sealed-sigil",
-    "title": "The Sealed Sigil",
+    "id": "sealed-entry-2",
+    "slug": "sealed-entity",
+    "title": "The Sealed Entity",
     "type": "journal",
-    "content": "We buried it in a locked folder in the root of the hard drive. It kept updating.",
-    "tags": ["data", "entity", "rune"],
-    "published": "2025-04-07"
+    "content": "We thought we sealed it. We thought it would stay buried, but it didn't.",
+    "tags": ["entity", "seal", "buried"],
+    "published": "2025-04-05",
+    "trigger": "unlock.entity"
   },
   {
-    "id": "note-to-self",
-    "slug": "burn-the-door",
-    "title": "Note to Self",
+    "id": "note-to-self-2",
+    "slug": "burn-the-books",
+    "title": "Note to Self: Burn the Books",
     "type": "shortform",
-    "full": "burn\nthe\ndoor",
-    "tags": ["note", "instruction", "regret"],
-    "published": "2025-04-07"
+    "content": "Forget. Forget everything. Burn it all.",
+    "tags": ["note", "regret", "burn"],
+    "published": "2025-04-06"
+  },
+  {
+    "id": "void-entry-2",
+    "slug": "the-black-hole",
+    "title": "The Black Hole",
+    "type": "journal",
+    "content": "A hollow scream echoed from the depths. The hole was growing. We couldn’t escape.",
+    "tags": ["void", "black hole", "escape"],
+    "published": "2025-04-07",
+    "trigger": "event.blackhole"
+  },
+  {
+    "id": "zergling-entry-2",
+    "slug": "zergling-territory",
+    "title": "Zergling Territory",
+    "type": "shortform",
+    "content": "Nests in every corner. Waiting. Watching.",
+    "tags": ["zergling", "territory", "nest"],
+    "published": "2025-04-08",
+    "trigger": "spawn.zerg"
+  },
+  {
+    "id": "vision-ff5",
+    "slug": "flash-memory-ff5",
+    "title": "Flash Memory Fragment 5",
+    "type": "image",
+    "content": "The storm rolled in, but something else followed. A shadow of pure hunger.",
+    "tags": ["storm", "hunger", "shadow"],
+    "published": "2025-04-09",
+    "image": "./images/ff5.png"
+  },
+  {
+    "id": "sealed-entry-3",
+    "slug": "sealed-box",
+    "title": "The Sealed Box",
+    "type": "journal",
+    "content": "The box was never meant to be opened. Yet, we still did it. And now we pay the price.",
+    "tags": ["sealed", "box", "curse"],
+    "published": "2025-04-10",
+    "trigger": "unlock.box"
   }
 ]

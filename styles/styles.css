@@ -14,7 +14,7 @@
   --color-9: #a54b6f;  /* deep magenta */
   --color-10: #4f2a57; /* purple */
 
-  --animation-duration: 60s;  /* 60 seconds for a full color cycle */
+  --animation-duration: 100s;  /* 60 seconds for a full color cycle */
   --font-family: monospace;  /* Monospace font */
   --padding: 2rem;  /* Padding */
   --min-height: 100vh;  /* Ensure full height */
