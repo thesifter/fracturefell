@@ -1,5 +1,5 @@
 import { loreShortformModal } from './loreShortformModal.js'; // Import the shortform modal
-import { loreImageModal } from './loreImageModal.js'; // Import the shortform modal
+import { loreImageModal } from './loreImageModal.js'; // Import the image modal
 
 
 function fetchAndRenderLoreEntries() {
