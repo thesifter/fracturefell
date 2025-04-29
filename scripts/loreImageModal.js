@@ -49,4 +49,20 @@ export function loreImageModal(imageSrc, captionText) {
 
   // Lock the body scroll when the modal is open
   document.body.style.overflow = 'hidden';
+ // Close modal when clicking the close button or outside the modal content
+  document.addEventListener('click', e => {
+    // Check if the clicked element is the close button or the overlay (background of the modal)
+    if (e.target.id === 'closeModal' || e.target.id === 'loreModal' || e.target.id === 'modalImage') {
+      document.getElementById('loreModal').classList.add('hidden'); // Hide the modal by adding 'hidden' class
+      document.body.style.overflow = ''; // Restore the scroll behavior of the page
+    }
+  });
+
+  // Close modal on pressing Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.getElementById('loreModal').classList.add('hidden');
+      document.body.style.overflow = ''; // Restore scroll behavior
+    }
+  });
 }
