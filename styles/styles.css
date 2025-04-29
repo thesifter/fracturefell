@@ -1,18 +1,77 @@
 /* === Global Styles === */
 
 /* Set up a dark, moody background with a radial gradient for the body */
+/* Define CSS Variables */
+:root {
+  --color-1: #1e3c72;  /* dark blue */
+  --color-2: #2a5c82;  /* muted midnight blue */
+  --color-3: #4b7c84;  /* sea greenish-blue */
+  --color-4: #5a8e6f;  /* dusty green */
+  --color-5: #7a9f4d;  /* mossy green */
+  --color-6: #d0b73f;  /* olive yellow */
+  --color-7: #d88f4b;  /* warm orange */
+  --color-8: #d47b65;  /* soft coral */
+  --color-9: #a54b6f;  /* deep magenta */
+  --color-10: #4f2a57; /* purple */
+
+  --animation-duration: 60s;  /* 60 seconds for a full color cycle */
+  --font-family: monospace;  /* Monospace font */
+  --padding: 2rem;  /* Padding */
+  --min-height: 100vh;  /* Ensure full height */
+}
+
+/* Body Styling */
 body {
   background: radial-gradient(
-    circle at top left,
-    #2a5c82,   /* muted midnight blue (faint ghostlight) */
-    #4c6b32,   /* murky olive-brown */
-    #3b2417    /* heavy earth brown */
+    circle at center,
+    var(--color-1),   /* dark blue */
+    var(--color-2)    /* muted midnight blue */
   );
-  color: #e2e2e2;  /* Set the text color to a light grey to contrast with dark background */
-  font-family: monospace;  /* Monospace font for a retro, digital aesthetic */
-  padding: 2rem;  /* Add padding to create space between content and edges */
-  min-height: 100vh;  /* Ensure the body takes up the full viewport height */
+  color: #e2e2e2;  /* Light grey text for contrast */
+  font-family: var(--font-family);  /* Retro, digital aesthetic */
+  padding: var(--padding);  /* Padding for content spacing */
+  min-height: var(--min-height);  /* Ensure full height */
+  animation: rotateGradient var(--animation-duration) infinite ease-in-out;
 }
+
+/* Keyframes for Gradient Rotation with Smooth Fade */
+@keyframes rotateGradient {
+  0% {
+    background: radial-gradient(circle at center, var(--color-1), var(--color-2));
+  }
+  10% {
+    background: radial-gradient(circle at center, var(--color-2), var(--color-3));
+  }
+  20% {
+    background: radial-gradient(circle at center, var(--color-3), var(--color-4));
+  }
+  30% {
+    background: radial-gradient(circle at center, var(--color-4), var(--color-5));
+  }
+  40% {
+    background: radial-gradient(circle at center, var(--color-5), var(--color-6));
+  }
+  50% {
+    background: radial-gradient(circle at center, var(--color-6), var(--color-7));
+  }
+  60% {
+    background: radial-gradient(circle at center, var(--color-7), var(--color-8));
+  }
+  70% {
+    background: radial-gradient(circle at center, var(--color-8), var(--color-9));
+  }
+  80% {
+    background: radial-gradient(circle at center, var(--color-9), var(--color-10));
+  }
+  90% {
+    background: radial-gradient(circle at center, var(--color-10), var(--color-1));
+  }
+  100% {
+    background: radial-gradient(circle at center, var(--color-1), var(--color-2));
+  }
+}
+
+
 
 /* Glitch effect applied to certain elements, creating a digital distortion effect */
 .glitched {
