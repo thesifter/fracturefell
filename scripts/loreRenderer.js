@@ -56,13 +56,14 @@ function renderLoreEntry(entry) {
   }
 
   switch (entry.type) {
-    case 'shortform':
+    case 'shortform':{
       const shortBody = document.createElement('p');
       shortBody.innerHTML = (entry.full || '[No content]').replace(/\n/g, '<br>');
       container.appendChild(shortBody);
       break;
+    }
 
-    case 'image':
+    case 'image':{
       const thumb = document.createElement('img');
       thumb.classList.add('lore-image-thumb');
       thumb.src = entry.image || `./images/${entry.slug}.jpg`;
@@ -72,13 +73,16 @@ function renderLoreEntry(entry) {
       });
       container.appendChild(thumb);
       break;
+    }
 
-    case 'journal':
-    default:
+    //case 'journal':{}
+    default: {
       const content = document.createElement('p');
       content.textContent = entry.content || '[No content provided]';
       container.appendChild(content);
       break;
+    }
+      
   }
 
   if (entry.tags && Array.isArray(entry.tags)) {
