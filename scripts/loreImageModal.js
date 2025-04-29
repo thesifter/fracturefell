@@ -33,14 +33,33 @@ export function loreImageModal(imageSrc, captionText) {
   // Append modal to body
   document.body.appendChild(modal);
 
-  // Click event for modal (to close it)
-  document.addEventListener('click', e => {
-    // If you click on the background (loreModal) or the close button, close the modal
-    if (e.target.id === 'loreModal') {
-      document.getElementById('loreModal').classList.add('hidden'); // Hide modal
-      document.body.style.overflow = ''; // Restore body scroll
+  // Function to close the modal
+  function closeModal() {
+    modal.classList.add('hidden'); // Hide the modal
+    document.body.style.overflow = ''; // Restore body scroll
+    // Remove event listeners to avoid duplication
+    document.removeEventListener('click', handleClickOutside);
+    document.removeEventListener('keydown', handleEscapeKey);
+  }
+
+  // Click event to close modal when clicking outside the modal content
+  function handleClickOutside(e) {
+    // If you click on the background (loreModal) or the image itself
+    if (e.target.id === 'loreModal' || e.target.id === 'modalImage') {
+      closeModal();
     }
-  });
+  }
+
+  // Keydown event to close modal when pressing Escape key
+  function handleEscapeKey(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  }
+
+  // Attach event listeners
+  document.addEventListener('click', handleClickOutside);
+  document.addEventListener('keydown', handleEscapeKey);
 
   // Make sure the image is visible when the modal is shown
   modal.classList.remove('hidden');
@@ -49,20 +68,4 @@ export function loreImageModal(imageSrc, captionText) {
 
   // Lock the body scroll when the modal is open
   document.body.style.overflow = 'hidden';
- // Close modal when clicking the close button or outside the modal content
-  document.addEventListener('click', e => {
-    // Check if the clicked element is the close button or the overlay (background of the modal)
-    if (e.target.id === 'closeModal' || e.target.id === 'loreModal' || e.target.id === 'modalImage') {
-      document.getElementById('loreModal').classList.add('hidden'); // Hide the modal by adding 'hidden' class
-      document.body.style.overflow = ''; // Restore the scroll behavior of the page
-    }
-  });
-
-  // Close modal on pressing Escape key
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.getElementById('loreModal').classList.add('hidden');
-      document.body.style.overflow = ''; // Restore scroll behavior
-    }
-  });
 }
