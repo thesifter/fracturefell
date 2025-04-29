@@ -104,6 +104,27 @@ body {
   color: #e2e2e2;
   padding: 0.3rem 0.6rem;
   border-radius: 3px;
-  font-size: 0.9rem;
+  font-size: 2rem;
+  transition: all 0.3s ease;
 }
 
+
+/* Strange style for charged state */
+.charged {
+  color: #ff00ff;  /* Bright purple to make it stand out */
+  transform: rotate(15deg);  /* Slight rotation */
+  text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.7), -2px -2px 5px rgba(0, 255, 0, 0.7); /* Neon glow effect */
+  animation: pulse 1.5s infinite alternate; /* Pulsing effect */
+}
+
+/* Pulse animation for a strange glowing effect */
+@keyframes pulse {
+  0% {
+    transform: rotate(15deg) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(-15deg) scale(1.1);
+    opacity: 1;
+  }
+}
