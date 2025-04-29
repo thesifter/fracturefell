@@ -107,5 +107,24 @@
     "published": "2025-04-10",
     "trigger": "unlock.box",
     "thumbnail": "./images/sealed-box-thumbnail.png"
+  },
+  {
+    "id": "macguffin-math",
+    "slug": "laws-of-the-non-geometry",
+    "title": "The Laws of Non-Euclidean Time",
+    "type": "shortform",
+    "content": "In the equation, the variable X was missing. It wasn't lost, it was **never there**. The clock rotated backwards, but the hands remained fixed, as if **time itself forgot**. According to the formula, we should never have existed at all. Yet, here we are, trapped in the paradox of two plus two **equaling seven**. The numbers don’t lie, but they don’t explain either. The law says this cannot happen. But we happen, don’t we?",
+    "tags": ["math", "time", "paradox", "macguffin"],
+    "published": "2025-04-11"
+  },
+  {
+    "id": "ghost-watch",
+    "slug": "missing-the-watch",
+    "title": "Ghost Watch",
+    "type": "shortform",
+    "content": "Ghost Watch\nI bought a watch—\nnot smart, just time.\nNo buzz, no map,\nno glass to shine.\nJust ticking hands,\na sun-worn band,\na way to say:\nI understand.\nLast night, washed clean\nand almost dressed,\nI left it sitting\non the chest.\nOut I went,\nmy wrist all pale—\na quiet gap,\na silent fail.\nI looked, I looked,\nthat empty glance—\na phantom twitch\nin every dance.\nNo phone, no weight\nto track or ping—\nI lost it too.\nDidn’t feel a thing.\nBut all night long\none thought would notch:\nnot for the phone—\nI missed my watch.",
+    "tags": ["watch", "loss", "memory"],
+    "published": "2025-04-11"
   }
+  
 ]

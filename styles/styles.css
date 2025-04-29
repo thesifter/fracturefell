@@ -186,11 +186,15 @@ body {
     opacity: 1;
   }
 }
-
+/* todo: redundant?*/
 .lore-thumbnail {
   max-width: 200px;   /* Limit width to 200px */
   max-height: 150px;  /* Limit height to 150px */
   object-fit: cover;  /* Ensure the image is cropped to fit the box without distortion */
   display: block;     /* Ensures the image behaves as a block element */
   margin: 0;
+}
+ 
+h1 {
+    font-size: 2.5em;
 }
