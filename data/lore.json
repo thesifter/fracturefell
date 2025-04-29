@@ -7,7 +7,8 @@
     "content": "The darkness stirred. A whisper crossed the threshold. We weren’t alone anymore.",
     "tags": ["void", "awakening", "threshold"],
     "published": "2025-04-01",
-    "trigger": "flash.ritual"
+    "trigger": "flash.ritual",
+    "thumbnail": "./images/void-awakens-thumbnail.png"
   },
   {
     "id": "zergling-entry-1",
@@ -17,7 +18,8 @@
     "content": "Small claws scuttling in the dark. No sound. Just shadows.",
     "tags": ["zergling", "scurry", "shadows"],
     "published": "2025-04-02",
-    "trigger": "spawn.zerg"
+    "trigger": "spawn.zerg",
+    "thumbnail": "./images/ff7.png"
   },
   {
     "id": "vision-ff3",
@@ -27,7 +29,8 @@
     "content": "A figure looms in the haze, like an echo of something once known.",
     "tags": ["vision", "haze", "memory"],
     "published": "2025-04-03",
-    "image": "./images/ff3.png"
+    "image": "./images/ff3.png",
+    "thumbnail": "./images/ff3-thumbnail.png"
   },
   {
     "id": "vision-ff4",
@@ -37,7 +40,8 @@
     "content": "The door cracked open, but the light on the other side was darker.",
     "tags": ["threshold", "door", "darkness"],
     "published": "2025-04-04",
-    "image": "./images/ff4.png"
+    "image": "./images/ff4.png",
+    "thumbnail": "./images/ff4-thumbnail.png"
   },
   {
     "id": "sealed-entry-2",
@@ -47,7 +51,8 @@
     "content": "We thought we sealed it. We thought it would stay buried, but it didn't.",
     "tags": ["entity", "seal", "buried"],
     "published": "2025-04-05",
-    "trigger": "unlock.entity"
+    "trigger": "unlock.entity",
+    "thumbnail": "./images/sealed-entity-thumbnail.png"
   },
   {
     "id": "note-to-self-2",
@@ -56,7 +61,8 @@
     "type": "shortform",
     "content": "Forget. Forget everything. Burn it all.",
     "tags": ["note", "regret", "burn"],
-    "published": "2025-04-06"
+    "published": "2025-04-06",
+    "thumbnail": "./images/burn-the-books-thumbnail.png"
   },
   {
     "id": "void-entry-2",
@@ -66,7 +72,8 @@
     "content": "A hollow scream echoed from the depths. The hole was growing. We couldn’t escape.",
     "tags": ["void", "black hole", "escape"],
     "published": "2025-04-07",
-    "trigger": "event.blackhole"
+    "trigger": "event.blackhole",
+    "thumbnail": "./images/black-hole-thumbnail.png"
   },
   {
     "id": "zergling-entry-2",
@@ -76,7 +83,8 @@
     "content": "Nests in every corner. Waiting. Watching.",
     "tags": ["zergling", "territory", "nest"],
     "published": "2025-04-08",
-    "trigger": "spawn.zerg"
+    "trigger": "spawn.zerg",
+    "thumbnail": "./images/zergling-territory-thumbnail.png"
   },
   {
     "id": "vision-ff5",
@@ -86,7 +94,8 @@
     "content": "The storm rolled in, but something else followed. A shadow of pure hunger.",
     "tags": ["storm", "hunger", "shadow"],
     "published": "2025-04-09",
-    "image": "./images/ff5.png"
+    "image": "./images/ff5.png",
+    "thumbnail": "./images/ff5-thumbnail.png"
   },
   {
     "id": "sealed-entry-3",
@@ -96,6 +105,7 @@
     "content": "The box was never meant to be opened. Yet, we still did it. And now we pay the price.",
     "tags": ["sealed", "box", "curse"],
     "published": "2025-04-10",
-    "trigger": "unlock.box"
+    "trigger": "unlock.box",
+    "thumbnail": "./images/sealed-box-thumbnail.png"
   }
 ]

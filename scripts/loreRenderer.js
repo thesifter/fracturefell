@@ -1,7 +1,6 @@
-// Handles fetching and rendering lore entries into the DOM (v2.2)
-// Refactored to accommodate new schema (removes `longform` and `full`, uses `content` and `type`)
+import { loreShortformModal } from './loreShortformModal.js'; // Import the shortform modal
+import { loreImageModal } from './loreImageModal.js'; // Import the shortform modal
 
-import { loreImageModal } from './loreImageModal.js';
 
 function fetchAndRenderLoreEntries() {
   fetch('./data/lore.json?v=' + Date.now())  // Fetching the lore data (adding cache-busting)
@@ -61,6 +60,24 @@ function renderLoreEntry(entry) {
       const shortBody = document.createElement('p');
       shortBody.innerHTML = (entry.content || '[No content]').replace(/\n/g, '<br>');  // Display content for shortform
       container.appendChild(shortBody);
+
+      // Handle thumbnail click event
+      if (entry.thumbnail) {
+        const thumbnail = document.createElement('img');
+        thumbnail.src = entry.thumbnail;
+        thumbnail.alt = 'Thumbnail';
+        thumbnail.classList.add('lore-thumbnail');
+        thumbnail.addEventListener('click', () => {
+          loreShortformModal(entry.title, entry.content, entry.thumbnail);  // Open the shortform modal with thumbnail
+        });
+        container.appendChild(thumbnail);
+      } else {
+        // Open modal without thumbnail
+        container.addEventListener('click', () => {
+          loreShortformModal(entry.title, entry.content);  // Open modal with shortform content
+        });
+      }
+
       break;
     }
 
@@ -70,7 +87,7 @@ function renderLoreEntry(entry) {
       thumb.src = entry.image || `./images/${entry.slug}.jpg`;  // Use image path or default to slug-based image
       thumb.alt = entry.title || 'Lore image thumb';  // Alt text for image
       thumb.addEventListener('click', () => {
-        loreImageModal(entry.image || `./images/${entry.slug}.jpg`, entry.content);  // Open modal on click
+        loreImageModal(entry.image || `./images/${entry.slug}.jpg`, entry.content);  // Open image modal on click
       });
       container.appendChild(thumb);
       break;
