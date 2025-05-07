@@ -125,6 +125,16 @@
     "content": "Ghost Watch\nI bought a watch—\nnot smart, just time.\nNo buzz, no map,\nno glass to shine.\nJust ticking hands,\na sun-worn band,\na way to say:\nI understand.\nLast night, washed clean\nand almost dressed,\nI left it sitting\non the chest.\nOut I went,\nmy wrist all pale—\na quiet gap,\na silent fail.\nI looked, I looked,\nthat empty glance—\na phantom twitch\nin every dance.\nNo phone, no weight\nto track or ping—\nI lost it too.\nDidn’t feel a thing.\nBut all night long\none thought would notch:\nnot for the phone—\nI missed my watch.",
     "tags": ["watch", "loss", "memory"],
     "published": "2025-04-11"
-  }
-  
+  },
+  {
+    "id": "zerg-spec-entry-1",
+    "slug": "zergling-xenobiology",
+    "title": "Xenobiological Report: Zergling",
+    "type": "lore",
+    "content": "**Scientific Designation:** *Therozoa serrata*\n**Common Name:** Zerg\n**Environmental Habitat:** Native to the sulfuric highland basins of Draxion Theta, characterized by superheated basalt plains, acidic rainfall, and methane-rich, low-oxygen atmospheres.\n**Core Biological Structure:** Hybrid exoskeletal-crystalline structure with chitin-silicate armor and piezoelectric lattice cores. Capable of limited self-repair via embedded nanocrystalline regrowth.\n**Blood Composition:** Cobalt-blue vanadium-rich ichor. Vanadocytes enable oxidative bursts for movement and energy conversion.\n**Metabolism:** Dual-phase metabolic system. Anaerobic glycolysis for baseline activity; chemotropic vanadate burst for rapid acceleration and combat.\n**Reproduction:** Thermophilic external budding near geothermal vents. Spore-like airborne gametocytes fertilize a resin matrix. Maturation in under 36 hours.\n**Evolutionary Traits:** Acid- and heat-resistant exoskeleton, pheromone-reactive neurology, vertical traversal via adhesive hooks. Crystalline resonance nodes may serve communication functions.\n**Hive Behavior:** No individual sapience. Displays decentralized swarm intelligence, likely mediated via semiochemicals or quantum resonance. Highly coordinated attack patterns suggest distributed cognition akin to slime molds or ant colonies.\n**Conclusion:** *Therozoa serrata* exhibits high environmental adaptability and threat potential. Swarm behavior and metabolic surges pose unique challenges to containment and observation. Further study recommended.",
+    "tags": ["zerg", "biology", "xenology", "swarm"],
+    "published": "2025-05-08",
+    "trigger": "spec.zerg",
+    "thumbnail": "./images/zergling-xenobio-thumbnail.png"
+  },
 ]
